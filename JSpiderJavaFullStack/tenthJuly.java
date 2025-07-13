@@ -10,12 +10,14 @@ public class tenthJuly {
 
 class Innernonpublic {
     static void greet() {
+        // int age = 21;
         System.out.println("inside Innernonpublic");
 
     }
 }
 class INInnernonpublic {
     static void greet() {
+        // int age = 21;
         System.out.println("inside INInnernonpublic");
 
     }

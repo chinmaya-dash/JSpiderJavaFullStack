@@ -15,7 +15,6 @@ public class PalindromeCheckerGenerativeApproach {
         return original == rev;
     }
 
-    // 🔥 Optimized generator-based range palindrome printer
     public static void generatePalindromesUpToN(int n) {
         for (int i = 0; ; i++) {
             String left = String.valueOf(i);
@@ -40,7 +39,6 @@ public class PalindromeCheckerGenerativeApproach {
         }
     }
 
-    // Main menu and user interaction
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

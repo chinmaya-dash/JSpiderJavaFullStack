@@ -3,19 +3,99 @@ public class firstTest {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter a number : ");
-        int  num = 1000;//sc.nextInt();
+        // System.out.println("Enter a number : ");
+        int  n = 5;//sc.nextInt();
+        int  m = 1020;//sc.nextInt();
 
 //        System.out.println(addAllTheDigits(num));
-                perfectNumber(num);
+            // System.out.println(lcm(n,m));
+            p4(n);
 
 
-
+sc.close();
     }
-    static void gcd(int n, int m){
-        for (int i = 1; i <= (n & m); i++) {
-
+    static void p7(int n){
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }            System.out.println();
         }
+        for (int i = 1; i <=n; i++) {
+            for (int j = n-i; j >= 1; j--) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+    static void p6(int n){
+        for (int i = 1; i <= n ; i++) {
+            for (int j = n-i; j >= 1; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i ; j++) {
+                System.out.print(j);
+            }
+            for (int j = i-1; j >= 1 ; j--) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    static void p5(int n){
+        for (int i = 1; i <= n; i++) {
+            for (int j = n; j >= i ; j--) {
+                System.out.print(j);
+                if (j != i){
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+   static void p4(int n) {
+    for (int i = 0; i < n; i++) {
+        if (i % 2 == 0) {
+            for (int j = 1; j <= n; j++) {
+                System.out.print((i * n + j) + " ");
+            }
+        } else {
+            for (int j = n; j >= 1; j--) {
+                System.out.print((i * n + j) + " ");
+            }
+        }
+        System.out.println();
+    }
+}
+
+    static void p3(int n){
+for (int i = 1; i <= n ; i++) {
+    if (i%2 == 0) {
+        for (int j = 1; j <= n; j++) {
+            System.out.print(j);
+            
+        }
+    }
+    else{
+         for (int j = n; j >= 1; j--) {
+            System.out.print(j);
+        }
+    }
+            System.out.println();
+
+}
+    }
+    static int lcm(int n, int m){
+return (n*m)/(gcd(n, m));
+    }
+    static int gcd(int n, int m){
+        int gcd = 0;
+        int min = (n<m) ? n:m;
+        for (int i = 1; i <= min; i++) {
+            if (n%i == 0 && m%i == 0) {
+                gcd = i;
+            }
+        }
+        return gcd;
     }
     static void perfectNumber(int n){
         for (int i = 1; i <= n; i++) {

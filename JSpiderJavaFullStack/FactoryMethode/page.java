@@ -78,8 +78,7 @@ public class page {
 
 
 
-
-//        NonRelated To Factory Methode
+//        NotRelated To Factory Methode
 //        Scanner sc = new Scanner(System.in);
 //        nonRelated nr = new nonRelated();
 //

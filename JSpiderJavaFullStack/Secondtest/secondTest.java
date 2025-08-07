@@ -29,7 +29,7 @@ public class secondTest {
 //                System.out.println(i);
 //            }
 //        }
-        snakenumber(5);
+//        snakenumber(5);
     }
     static void pattern(int n){
         for (int i = 0; i <= n; i++) {
@@ -353,7 +353,7 @@ return true;
             System.out.println();
         }
     }
-    static void snakenumber(int n){
+    static void dsnakenumber(int n){
         for (int i = 0; i < n ; i++) {
            if (i%2 == 0){
                for (int j = 1; j <= n ; j++) {

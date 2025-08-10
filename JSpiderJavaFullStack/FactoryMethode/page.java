@@ -32,6 +32,8 @@ class Page {
         System.out.print("Enter your email: ");
         p.email = sc.nextLine();
 
+        sc.close();
+
         return p;
     }
 
@@ -53,6 +55,8 @@ class Page {
         System.out.print("Enter your email: ");
         p.email = sc.nextLine();
 
+                sc.close();
+
         return p;
     }
 
@@ -64,7 +68,7 @@ class Page {
     }
 }
 
-public class Page {
+public class page {
     public static void main(String[] args) {
         // Using factory method for registration
         Page registeredUser = Page.register();

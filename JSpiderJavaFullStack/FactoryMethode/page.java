@@ -64,7 +64,7 @@ class Page {
     }
 }
 
-public class page {
+public class Page {
     public static void main(String[] args) {
         // Using factory method for registration
         Page registeredUser = Page.register();

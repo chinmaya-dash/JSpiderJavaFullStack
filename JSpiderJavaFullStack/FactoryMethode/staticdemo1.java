@@ -10,6 +10,8 @@ public class staticdemo1 {
         staticdemo1 sd = new staticdemo1();
         sd.j = sc.nextInt();
         i = sc.nextInt();
+                sc.close();
+
         return sd;
     }
     void displlay(){

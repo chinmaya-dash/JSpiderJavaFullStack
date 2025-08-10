@@ -17,6 +17,8 @@ public class staticNonstaticMethode {
         st.age = sc.nextInt();
         st.salary = sc.nextLong();
 //                System.out.println(st.name+"\n"+st.age+"\n"+st.id+"\n"+st.salary);
+        sc.close();
+
         return st;
     }
      void display(){

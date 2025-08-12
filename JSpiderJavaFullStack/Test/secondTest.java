@@ -29,7 +29,20 @@ public class secondTest {
 //                System.out.println(i);
 //            }
 //        }
-//        snakenumber(5);
+        sumOfEvenAndOdd(5);
+    }
+    static void sumOfEvenAndOdd(int n){
+        int d = 0;
+        int e = 0;
+        for (int i = 1; i <= n; i++) {
+            if (i%2 == 0){
+                e+=i;
+            }else{
+                d+=i;
+            }
+        }
+        System.out.println("sum of even = "+e);
+        System.out.println("sum of odd = "+d);
     }
     static void pattern(int n){
         for (int i = 0; i <= n; i++) {
@@ -354,7 +367,7 @@ return true;
         }
     }
     static void dsnakenumber(int n){
-        for (int i = 0; i < n ; i++) {
+        for (int i = 0; i <= n ; i++) {
            if (i%2 == 0){
                for (int j = 1; j <= n ; j++) {
                    System.out.print(i*n+j+" ");

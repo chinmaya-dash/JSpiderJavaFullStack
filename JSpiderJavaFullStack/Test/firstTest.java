@@ -6,15 +6,31 @@ public class firstTest {
 
         // System.out.println("Enter a number : ");
         int  n = 5;//sc.nextInt();
-        int  m = 1020;//sc.nextInt();
+//        int  m = 1020;//sc.nextInt();
 
 //        System.out.println(addAllTheDigits(num));
             // System.out.println(lcm(n,m));
-            p4(n);
+            p10(n);
 
 
 sc.close();
     }
+
+    static void p10(int n){
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 7; j++) {
+                if ((i == 0 && j%3  !=0) || (i == 1 && j%3 == 0) || (i-j == 2) || (i+j == 8)){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+
+
     static void p7(int n){
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {

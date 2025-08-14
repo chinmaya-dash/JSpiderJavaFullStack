@@ -9,6 +9,9 @@ public class secondTest {
 //        System.out.println("Enter a number : ");
 //        int m = sc.nextInt();
 
+//i == j || j == n+1 for x pattern
+
+
 
 //        for (int i = 1; i <= range ; i++) {
 //            if (automerfic(i)){

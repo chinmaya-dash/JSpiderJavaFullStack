@@ -72,7 +72,6 @@ class AUDI extends vehiclee {
     public void accelerate() {
         System.out.println("Audi accelerating...");
     }
-
     @Override
     public void stop() {
         System.out.println("Audi stopped");
@@ -82,24 +81,20 @@ class AUDI extends vehiclee {
         System.out.println("Audi has perfect ABS");
     }
 }
-
 // -------------------- BENZ --------------------
 class BENZ extends vehiclee {
     @Override
     public void start() {
         System.out.println("BENZ started");
     }
-
     @Override
     public void accelerate() {
         System.out.println("BENZ accelerating...");
     }
-
     @Override
     public void stop() {
         System.out.println("BENZ stopped");
     }
-
     public void GPS() {
         System.out.println("BENZ has GPS feature");
     }

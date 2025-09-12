@@ -2,7 +2,7 @@ package DSA.StringsInJava;
 
 public class CharOccurrence {
     public static void main(String[] args) {
-        String str = "hello world";
+        String str = "ramana kumar";
         while (str.length() > 0) {
             char c = str.charAt(0);
             int count = 0;
@@ -12,9 +12,8 @@ public class CharOccurrence {
                     count++;
                 }
             }
-
-            System.out.println(c + " → " + count);
-            str = str.replace("" + c, ""); // remove all occurrences
+            System.out.println(count);
+            str = str.replace("" + c, ""); 
         }
     }
 }

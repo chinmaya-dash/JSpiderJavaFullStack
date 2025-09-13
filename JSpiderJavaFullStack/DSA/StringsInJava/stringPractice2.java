@@ -46,7 +46,7 @@ public class stringPractice2 {
 
 
     }
-    private static boolean isPalindrom(String str) {
+    public static boolean isPalindrom(String str) {
      int i = 0;
      int j = str.length()-1;
      while (i<j) {
@@ -63,8 +63,8 @@ public class stringPractice2 {
                 System.out.println(a);
         System.out.println(b);
 
-        a = a=b;
-        b = a.substring(0,a.length()-b.length());
+        a = a + b;
+        b = a.substring(0, a.length() - b.length());
         a = a.substring(b.length());
 
         System.out.println(a);

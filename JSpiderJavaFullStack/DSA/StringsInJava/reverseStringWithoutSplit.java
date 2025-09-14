@@ -21,7 +21,6 @@ public class reverseStringWithoutSplit {
                 }
             }
         }
-
         if (!str.isEmpty()) {
             words[wordi++] = reverseWord(str);
         }

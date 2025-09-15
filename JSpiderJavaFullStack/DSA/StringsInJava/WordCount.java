@@ -14,4 +14,3 @@ public class WordCount {
         System.out.println("Number of words: " + count);
     }
 }
-

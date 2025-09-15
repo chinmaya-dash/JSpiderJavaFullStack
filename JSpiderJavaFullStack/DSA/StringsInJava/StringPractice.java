@@ -14,7 +14,6 @@ public class StringPractice {
         isPalindromInRecursion(str);
         sc.close();
     }
-
     static void isPalindromInRecursion(String s) {
         if (isRecursion(s, s.length()-1, "")) {
             System.out.println("yes , it is palindrom");
@@ -46,7 +45,7 @@ public class StringPractice {
             s = n;
         }
 
-        System.out.println();
+        // System.out.println(minChar+" = "+minCount);
     }
 
     static void minOccuranceInString(String s) {

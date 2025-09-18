@@ -6,10 +6,10 @@ public class StringPractice {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String str = sc.nextLine();
+        String str = "Java is very very very very easy easy easy java";
         // System.out.println(anagram(str, str));
         // OccuranceInString(str);
-        minOccuranceInString(str);
+        // minOccuranceInString(str);
         // maxOccuranceInString(str);
         // isPalindromInRecursion(str);
         // secondMaxCharOccurance(str);
@@ -19,21 +19,99 @@ public class StringPractice {
         // String n = "chinu";
         // System.out.println(s == n);
 
-    // System.out.println(ifPanagramString(str));
-    // checkIfVowelPresent(str);
-    // checkIfDuplicateWithContains(str);
+        // System.out.println(ifPanagramString(str));
+        // checkIfVowelPresent(str);
+        checkIfDuplicateWithContains(str);
+        // secondMaxCharOccurance(str);
 
+        sc.close();
+    }  
 
-    sc.close();
+    static void checkIfDuplicateWithContains(String s) {
+        s = s.toLowerCase().trim();
+        String[] str = s.split(" ");
+
+        String n = "";
+        for (int i = 0; i < str.length; i++) {
+            if (!n.contains(str[i] + "")) {
+                n += str[i] + " ";
+            }
+        }
+        inItCap(n);
     }
-    // static void checkIfDuplicateWithContains(String s){
-    // String n = "";
-    // for (int i = 0; i < s.length(); i++) {
-    // if (!n.contains(s.charAt(i)+"")) {
-    // n+=s.charAt(i);
-    // }
-    // }
-    // }
+
+    public static void inItCap(String s) {
+        String[] words = s.split(" ");
+        String result = "";
+
+        for (String word : words) {
+            result += Character.toUpperCase(word.charAt(0)) + word.substring(1) + " ";
+        }
+
+        System.out.println(result.trim());
+    }
+
+    // wajptp second max character count second min count in a given string
+    static void secondMaxCharOccurance(String s) {
+        String[] x = s.split(" ");
+        String maxString = "";
+        int maxCount = 0;
+        String minString = "";
+        int minCount = s.length();
+
+        String secondMaxString = "";
+        int secondMaxCount = 0;
+        String secondMinString = "";
+        int secondMinCount = s.length();
+
+        for (int i = 0; i < x.length; i++) {
+            boolean alreadyCounted = false;
+            for (int k = 0; k < i; k++) {
+                if (x[i].equalsIgnoreCase(x[k])) {
+                    alreadyCounted = true;
+                    break;
+                }
+            }
+            if (alreadyCounted)
+                continue;
+
+            int count = 0;
+            for (int j = 0; j < x.length; j++) {
+                if (x[i].equalsIgnoreCase(x[j])) {
+                    count++;
+                }
+            }
+
+            if (count > maxCount) {
+                secondMaxCount = maxCount;
+                secondMaxString = maxString;
+
+                maxCount = count;
+                maxString = x[i];
+            } else if (count > secondMaxCount && count < maxCount) {
+                secondMaxCount = count;
+                secondMaxString = x[i];
+            }
+
+            if (count < minCount) {
+                secondMinCount = minCount;
+                secondMinString = minString;
+
+                minCount = count;
+                minString = x[i];
+            } else if (count < secondMinCount && count > minCount) {
+                secondMinCount = count;
+                secondMinString = x[i];
+            }
+        }
+
+        System.out.println("Max String: " + maxString + " = " + maxCount);
+        System.out.println("Min String: " + minString + " = " + minCount);
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("Second Max String: " + secondMaxString + " = " + secondMaxCount);
+        System.out.println("Second Min String: " + secondMinString + " = " + secondMinCount);
+    }
+
     static void checkIfVowelPresent(String s) {
         String vowels = "AEIOUaeiou";
         String n = "";
@@ -56,17 +134,7 @@ public class StringPractice {
 
     }
 
-    // wajptp second max character count in a given string
-    static void secondMaxCharOccurance(String[] s) {
-        
-        String maxString = "";
-        int maxCount = 0;
-
-      
-
-    }
-
-       static void maxOccuranceInString(String s) {
+    static void maxOccuranceInString(String s) {
         String n = "";
         char maxChar = ' ';
         int maxCount = 0;
@@ -143,8 +211,6 @@ public class StringPractice {
         // System.out.println(minChar + " = " + minCount);
         System.out.println();
     }
-
- 
 
     // Assignment
 

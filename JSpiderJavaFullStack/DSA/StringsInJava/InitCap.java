@@ -3,7 +3,10 @@ package DSA.StringsInJava;
 public class InitCap {
     public static void main(String[] args) {
         String str = "java is easy";
-        String[] words = str.split(" ");
+       inItCap(str);
+    }
+    public static void inItCap(String s){
+ String[] words = s.split(" ");
         String result = "";
 
         for (String word : words) {

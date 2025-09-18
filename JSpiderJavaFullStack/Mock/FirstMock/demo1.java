@@ -54,6 +54,7 @@ public class demo1 {
 //         secondsnakePattern(5);
         alternateAutomerficNUmber(1, sc.nextInt(), 0);
 
+                sc.close();
     }
 
     static void alternateAutomerficNUmber(int start, int end, int count) {

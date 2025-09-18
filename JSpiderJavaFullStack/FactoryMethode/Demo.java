@@ -13,6 +13,8 @@ public class Demo {
         d.n = sc.next();
         d.age = sc.nextInt();
         d.id = sc.nextInt();
+                sc.close();
+
         return d;
     }
 public void display(){

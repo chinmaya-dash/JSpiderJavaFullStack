@@ -13,6 +13,8 @@ public class firstMock {
         } else {
             System.out.println(choice + " is not a palindrome");
         }
+                sc.close();
+
     }
     static boolean palindromeString(String s, int start, int end) {
         if (start >= end) return true;

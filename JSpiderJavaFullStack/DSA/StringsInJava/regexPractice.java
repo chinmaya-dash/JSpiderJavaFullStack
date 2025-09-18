@@ -1,0 +1,15 @@
+package DSA.StringsInJava;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class regexPractice {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = "abababbbababbaabbabbababbabbabab";
+        String exp = "ab";
+        normalregex(s, exp);
+    }
+    public static void normalregex(String s, String exp){
+
+    }
+}

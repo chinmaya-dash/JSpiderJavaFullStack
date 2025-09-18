@@ -11,9 +11,7 @@ public class charOccuranceInString {
         for (int i = 0; i < ch.length; i++) {
             if (ch[i] >= '0' && ch[i] <='9') {
                 for (int j = 0; j < ch.length; j++) {
-                    // if (ch[i] == ) {
-                        
-                    // }
+                   
                 }
             }
         }

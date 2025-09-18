@@ -7,69 +7,66 @@ public class StringPractice {
         Scanner sc = new Scanner(System.in);
 
         String str = sc.nextLine();
-        System.out.println(anagram(str, str));
-        OccuranceInString(str);
+        // System.out.println(anagram(str, str));
+        // OccuranceInString(str);
         minOccuranceInString(str);
-        maxOccuranceInString(str);
-        isPalindromInRecursion(str);
-        sc.close();
-    }
-    static void isPalindromInRecursion(String s) {
-        if (isRecursion(s, s.length()-1, "")) {
-            System.out.println("yes , it is palindrom");
-        } else {
-            System.out.println("No , it is not palindrom");
-        }
-    }
-    static boolean isRecursion(String s, int n, String rev){
-        if (n < 0) {
-            return s.equals(rev);
-        }
-        return isRecursion(s,  n-1, rev+s.charAt(n));
-    }
+        // maxOccuranceInString(str);
+        // isPalindromInRecursion(str);
+        // secondMaxCharOccurance(str);
+        // smallestPalindromeStringCheck(str);
 
-    static void OccuranceInString(String s) {
+        // String s = "chinu";
+        // String n = "chinu";
+        // System.out.println(s == n);
+
+    // System.out.println(ifPanagramString(str));
+    // checkIfVowelPresent(str);
+    // checkIfDuplicateWithContains(str);
+
+
+    sc.close();
+    }
+    // static void checkIfDuplicateWithContains(String s){
+    // String n = "";
+    // for (int i = 0; i < s.length(); i++) {
+    // if (!n.contains(s.charAt(i)+"")) {
+    // n+=s.charAt(i);
+    // }
+    // }
+    // }
+    static void checkIfVowelPresent(String s) {
+        String vowels = "AEIOUaeiou";
         String n = "";
-        char minChar = ' ';
-        int minCount = s.length();
-
-        while (s.length() > 0) {
-            char ch = s.charAt(0);
-            n = s.replace(ch + "", "");
-            int count = s.length() - n.length();
-            if (count < minCount) {
-                minCount = count;
-                minChar = ch;
+        for (int i = 0; i < vowels.length(); i++) {
+            if (!s.contains(vowels.charAt(i) + "")) {
+                n += vowels.charAt(i);
             }
-            System.out.println(ch + " = " + count);
-            s = n;
         }
-
-        // System.out.println(minChar+" = "+minCount);
+        System.out.println(n);
     }
 
-    static void minOccuranceInString(String s) {
-        String n = "";
-        char minChar = ' ';
-        int minCount = s.length();
-
-        while (s.length() > 0) {
-            char ch = s.charAt(0);
-            n = s.replace(ch + "", "");
-            int count = s.length() - n.length();
-            if (count < minCount) {
-                minCount = count;
-                minChar = ch;
-            }
-            System.out.println(ch + " = " + count);
-            s = n;
+    static boolean ifPanagramString(String s) {
+        if (s.length() < 26)
+            return false;
+        for (char i = 'a'; i < 'z'; i++) {
+            if (!s.contains(i + ""))
+                return false;
         }
-        System.out.println();
-        System.out.println(minChar + " = " + minCount);
-        System.out.println();
+        return true;
+
     }
 
-    static void maxOccuranceInString(String s) {
+    // wajptp second max character count in a given string
+    static void secondMaxCharOccurance(String[] s) {
+        
+        String maxString = "";
+        int maxCount = 0;
+
+      
+
+    }
+
+       static void maxOccuranceInString(String s) {
         String n = "";
         char maxChar = ' ';
         int maxCount = 0;
@@ -89,9 +86,67 @@ public class StringPractice {
         System.out.println(maxChar + " = " + maxCount);
     }
 
-    // Assignment
-    // wajptp second max character count in a given string
     // wajptp second minimum char count in a given string
+    static void isPalindromInRecursion(String s) {
+        if (isRecursion(s, s.length() - 1, "")) {
+            System.out.println("yes , it is palindrom");
+        } else {
+            System.out.println("No , it is not palindrom");
+        }
+    }
+
+    static boolean isRecursion(String s, int n, String rev) {
+        if (n < 0) {
+            return s.equals(rev);
+        }
+        return isRecursion(s, n - 1, rev + s.charAt(n));
+    }
+
+    static void OccuranceInString(String s) {
+        String n = "";
+        char minChar = ' ';
+        int minCount = s.length();
+
+        while (s.length() > 0) {
+            char ch = s.charAt(0);
+            n = s.replace(ch + "", "");
+            int count = s.length() - n.length();
+            if (count < minCount) {
+                minCount = count;
+                minChar = ch;
+            }
+            System.out.println(ch + " = " + count);
+            s = n;
+        }
+
+        System.out.println(minChar + " = " + minCount);
+    }
+
+    static void minOccuranceInString(String s) {
+        String n = "";
+
+        // char minChar = ' ';
+        // int minCount = s.length();
+
+        while (s.length() > 0) {
+            char ch = s.charAt(0);
+            n = s.replace(ch + "", "");
+            int count = s.length() - n.length();
+            // if (count < minCount) {
+            // minCount = count;
+            // minChar = ch;
+            // }
+            System.out.println(ch + " = " + count);
+            s = n;
+        }
+        System.out.println();
+        // System.out.println(minChar + " = " + minCount);
+        System.out.println();
+    }
+
+ 
+
+    // Assignment
 
     // check givemn strins are anagram or not using recursion ******
 
@@ -145,8 +200,8 @@ public class StringPractice {
                 ch[i] = Character.toLowerCase(ch[i]);
             }
         }
-        // String n = ch.toString();
-        System.out.println(ch);
+        String n = ch.toString();
+        System.out.println(n);
     }
 
     static void smallestPalindromeStringCheck(String s) {

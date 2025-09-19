@@ -6,26 +6,33 @@ public class StringPractice {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String str = "Java is very very very very easy easy easy java";
-        // System.out.println(anagram(str, str));
-        // OccuranceInString(str);
-        // minOccuranceInString(str);
-        // maxOccuranceInString(str);
-        // isPalindromInRecursion(str);
-        // secondMaxCharOccurance(str);
-        // smallestPalindromeStringCheck(str);
+        String str = "The quick brown fox jumps over the lazy dog";
 
-        // String s = "chinu";
-        // String n = "chinu";
-        // System.out.println(s == n);
-
-        // System.out.println(ifPanagramString(str));
-        // checkIfVowelPresent(str);
-        checkIfDuplicateWithContains(str);
-        // secondMaxCharOccurance(str);
-
+        System.out.println(givenStringIsPanagram(str));
         sc.close();
-    }  
+    }
+
+    public static boolean givenStringIsPanagram(String s) {
+        if (s.length() < 26)return false;
+        s = s.toLowerCase();
+            
+        for (char i = 'a'; i <= 'z'; i++) {
+                if (!s.contains(i + ""))return false;
+            }
+        return true;
+    }
+
+    public static void missingVowelsInAStringUsingContains(String s) {
+        String vowels = "AEIOUaeiou";
+        String str = "";
+        for (int i = 0; i < vowels.length(); i++) {
+            if (!s.contains(vowels.charAt(i) + "")) {
+                System.out.println();
+                str += vowels.charAt(i);
+            }
+        }
+        System.out.println(str);
+    }
 
     static void checkIfDuplicateWithContains(String s) {
         s = s.toLowerCase().trim();

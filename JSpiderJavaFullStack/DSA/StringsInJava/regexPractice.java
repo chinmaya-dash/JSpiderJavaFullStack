@@ -5,11 +5,15 @@ import java.util.regex.Pattern;
 public class regexPractice {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String s = "abababbbababbaabbabbababbabbabab";
-        String exp = "ab";
+        String s = "ababaaabbab";
+        String exp = "ab.";
         normalregex(s, exp);
     }
     public static void normalregex(String s, String exp){
-
+Pattern p = Pattern.compile(exp);
+Matcher m = p.matcher(s);
+while (m.find()) {
+    System.out.println(m.group());
+}
     }
 }

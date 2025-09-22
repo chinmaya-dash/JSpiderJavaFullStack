@@ -6,26 +6,68 @@ public class stringTest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String s = "java is easy";
+        String s = " java java is is is very easy easy easy very ";
+        s = s.trim();
         InItCap(s);
-        InItCapInSplit(s);
-        reverseStringUsingString(s);
-        reverseStringUsingStringbuilder(s);
-        reverseTheWordsInPlaceUsingSplit(s);
-        reverseTheWordsInPlace(s);
-        
+        // InItCapInSplit(s);
+        // reverseStringUsingString(s);
+        // reverseStringUsingStringbuilder(s);
+        // reverseTheWordsInPlaceUsingSplit(s);
+        // reverseTheWordsInPlace(s);
+        countwords(s);
+        removeDuplicateWordsOccurance(s);
+        wordOccurance(s);
         sc.close();
     }
 
+    static void wordOccurance(String s) {
+        String[] words = s.split(" ");
+        for (int i = 0; i < words.length;i++) {
+            if (words[i].equals("")) {
+                continue;
+            }
+            int count = 1;
+            for (int j = i+1; j<words.length;j++) {
+                if (words[i].equals(words[j])) {
+                    count++;
+                    words[j] = "";
+                }
+            }
+            System.out.println(words[i]+" - "+count);
+        }
+    }
+
+    static void removeDuplicateWordsOccurance(String s) {
+        String words[] = s.split(" ");
+        String str = "";
+
+        for (String word : words) {
+            if (!str.contains(word)) {
+                str += word + " ";
+            }
+        }
+        System.out.println(str.trim());
+    }
+
+    static void countwords(String s) {
+        int count = 1;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == ' ' && s.charAt(i + 1) != ' ') {
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+
     static void reverseTheWordsInPlace(String s) {
-        String [] words = s.split(" ");
+        String[] words = s.split(" ");
         String reverse = "";
         for (String word : words) {
             String str = "";
-            for (int i = word.length()-1; i >= 0; i--) {
-                str+=word.charAt(i);
+            for (int i = word.length() - 1; i >= 0; i--) {
+                str += word.charAt(i);
             }
-            reverse+=str+" ";
+            reverse += str + " ";
         }
         System.out.println(reverse);
     }

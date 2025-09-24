@@ -6,34 +6,126 @@ public class stringTest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String s = " java java is is is very easy easy easy very ";
+        String s = " Hello Chinmaya Dash This Side ";
         s = s.trim();
-        InItCap(s);
+        // reverseTheGivenString(s);
+        // countCharactersInString(s);
+        // sumOfDigitsInString(s);
+        // System.out.println(palindromString(s));
+        // capToSmallToCap(s);
+        // InItCap(s);
         // InItCapInSplit(s);
+        wordReverse(s);
         // reverseStringUsingString(s);
         // reverseStringUsingStringbuilder(s);
         // reverseTheWordsInPlaceUsingSplit(s);
         // reverseTheWordsInPlace(s);
-        countwords(s);
-        removeDuplicateWordsOccurance(s);
-        wordOccurance(s);
+        // countwords(s);
+        // removeDuplicateWordsOccurance(s);
+        // wordOccurance(s);
+        // stringCharOccurance(s);
         sc.close();
+    }
+    static void wordReverse(String s){
+        String str = "";int j = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == ' ' && s.charAt(i+1) != ' ') {
+                
+            }
+        }
+    }
+    static void capToSmallToCap(String s){
+        char [] ch = s.toCharArray();
+        for (int i = 0; i < ch.length; i++) {
+            if (Character.isLowerCase(ch[i])) {
+                ch[i] = Character.toUpperCase(ch[i]);
+            }else if (Character.isUpperCase(ch[i])) {
+                ch[i] = Character.toLowerCase(ch[i]);
+            }
+        }
+        System.out.println(ch);
+    }
+
+    static boolean palindromString(String s) {
+        int j = s.length() - 1;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) != s.charAt(j)) {
+                return false;
+            }
+            j--;
+        }
+        return true;
+    }
+
+    static void sumOfDigitsInString(String s) {
+        int sum = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) >= '0' && s.charAt(i) <= '9') {
+                sum += Integer.parseInt(s.charAt(i) + "");
+            }
+        }
+        System.out.println(sum);
+    }
+
+    static void countCharactersInString(String s) {
+        char[] ch = s.toCharArray();
+        for (int i = 0; i < ch.length; i++) {
+            if (ch[i] == '\u0000') {
+                continue;
+            }
+            int count = 1;
+            for (int j = i + 1; j < ch.length; j++) {
+                if (ch[i] == ch[j]) {
+                    count++;
+                    ch[j] = '\u0000';
+                }
+            }
+            System.out.println(ch[i] + " - " + count);
+        }
+    }
+
+    static void reverseTheGivenString(String s) {
+        StringBuilder revstr = new StringBuilder(s);
+        System.out.println(revstr.reverse());
+    }
+
+    static void stringCharOccurance(String s) {
+        char[] ch = s.toCharArray();
+
+        for (int i = 0; i < ch.length; i++) {
+            if (ch[i] == '\u0000')
+                continue;
+
+            int count = 1;
+            for (int j = i + 1; j < ch.length; j++) {
+                if (ch[i] == ch[j]) {
+                    count++;
+                    ch[j] = '\u0000';
+                }
+            }
+
+            if (count == 1) {
+                System.out.print(ch[i]);
+            } else {
+                System.out.print(ch[i] + String.valueOf(count - 1));
+            }
+        }
     }
 
     static void wordOccurance(String s) {
         String[] words = s.split(" ");
-        for (int i = 0; i < words.length;i++) {
+        for (int i = 0; i < words.length; i++) {
             if (words[i].equals("")) {
                 continue;
             }
             int count = 1;
-            for (int j = i+1; j<words.length;j++) {
+            for (int j = i + 1; j < words.length; j++) {
                 if (words[i].equals(words[j])) {
                     count++;
                     words[j] = "";
                 }
             }
-            System.out.println(words[i]+" - "+count);
+            System.out.println(words[i] + " - " + count);
         }
     }
 

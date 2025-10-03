@@ -24,7 +24,20 @@ public class stringTest {
         // removeDuplicateWordsOccurance(s);
         // wordOccurance(s);
         // stringCharOccurance(s);
+
+
+        // do it 
+        // UniqueChars(s)
+        
         sc.close();
+    }
+    static void UniqueChars(String str){
+          for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (str.indexOf(c) == str.lastIndexOf(c)) {
+                System.out.print(c + " ");
+            }
+        }
     }
     static void wordReverse(String s){
         String str = "";int j = 0;

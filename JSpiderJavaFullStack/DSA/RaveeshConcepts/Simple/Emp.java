@@ -1,4 +1,4 @@
-package DSA.RaveeshConcepts;
+package DSA.RaveeshConcepts.Simple;
 
 public class Emp implements Comparable{
     String name;

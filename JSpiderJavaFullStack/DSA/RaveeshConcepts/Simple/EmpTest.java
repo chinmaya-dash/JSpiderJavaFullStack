@@ -1,4 +1,4 @@
-package DSA.RaveeshConcepts;
+package DSA.RaveeshConcepts.Simple;
 
 import java.util.Arrays;
 

@@ -58,7 +58,7 @@ public class LinkedList {
             return;
         }
         Node current = first;
-        for (int i = 1; i < index; i++) {
+        for (int i = 1; i < index; i++) { 
             current = current.next;
         }
         current.next = current.next.next;
@@ -111,6 +111,9 @@ public class LinkedList {
 
         LinkedList test = new LinkedList();
         System.out.println(test.size());
+        test.add(12);
+        test.add(13);
+        // test.remove(test.size()-2);
         System.out.println(test);
 
     }

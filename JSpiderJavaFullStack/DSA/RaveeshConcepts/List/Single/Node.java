@@ -1,4 +1,4 @@
-package DSA.RaveeshConcepts.List;
+package DSA.RaveeshConcepts.List.Single;
 
 public class Node {
     Object element;

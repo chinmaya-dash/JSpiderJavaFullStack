@@ -1,4 +1,4 @@
-package DSA.RaveeshConcepts.List;
+package DSA.RaveeshConcepts.List.Double.Assignment;
 
 public class DoubleLinkedList {
     private D_Node first = null;

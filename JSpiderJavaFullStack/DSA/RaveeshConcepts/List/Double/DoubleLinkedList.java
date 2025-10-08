@@ -110,5 +110,24 @@ public class DoubleLinkedList {
         return temp.element;
     }
 
-
+    public static void main(String[] args) {
+        DoubleLinkedList list = new DoubleLinkedList();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        list.add(50);
+        System.out.println(list);
+        list.add(2, 25);
+        System.out.println(list);
+        list.remove(0);
+        System.out.println(list);
+        list.remove(4);
+        System.out.println(list);
+        list.remove(2);
+        System.out.println(list);
+        System.out.println(list.get(2));
+        list.reverse();
+        System.out.println("Reversed: " + list);
+    }
 }

@@ -29,8 +29,7 @@ public class DoubleLinkedList {
             D_Node n = new D_Node(e, first, null);
             first.previous = n;
             first = n;
-            count++;
-            return;
+          return;
         }
         D_Node current = first;
         for (int i = 1; i < index; i++) {
@@ -69,5 +68,47 @@ public class DoubleLinkedList {
         count--;
 
     }
+    public void reverse(){
+        D_Node current = first;
+        D_Node temp = null;
+
+        while (current != null) {
+            temp = current.previous;
+            current.previous = current.next;
+            current.next = temp;
+            current = current.previous;
+        }
+
+        if (temp != null) {
+            last = first;
+            first = temp.previous;
+        }
+    }
+    @Override
+    public String toString() {
+        if (size() == 0)
+            return "[]";
+        StringBuilder s = new StringBuilder("[" + first.element);
+        D_Node current = first;
+        while (current.next != null) {
+            current = current.next;
+            s.append(", ").append(current.element);
+        }
+        s.append("]");
+        return s.toString();
+    }
+
+    public Object get(int index) {
+        if (index < 0 || index >= size()) {
+            throw new IndexOutOfBoundsException("Index: " + index);
+        }
+
+        D_Node temp = first;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp.element;
+    }
+
 
 }

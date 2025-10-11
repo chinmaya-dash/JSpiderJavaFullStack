@@ -49,13 +49,13 @@ public class StringPractice {
 
     public static void inItCap(String s) {
         String[] words = s.split(" ");
-        String result = "";
+        StringBuilder result = new StringBuilder();
 
         for (String word : words) {
-            result += Character.toUpperCase(word.charAt(0)) + word.substring(1) + " ";
+            result.append(Character.toUpperCase(word.charAt(0))).append(word.substring(1)).append(" ");
         }
 
-        System.out.println(result.trim());
+        System.out.println(result.toString().trim());
     }
 
     // wajptp second max character count second min count in a given string

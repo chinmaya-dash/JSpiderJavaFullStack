@@ -1,5 +1,6 @@
 package Mock.SecondMock;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -9,8 +10,209 @@ public class SecondMockString {
 
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
-        removeDuplicateWordWithoutSplit(s);
+        minimumOccuredCharAndCount(s);
     }
+
+    private static void minimumOccuredCharAndCount(String s){
+        char minChar = '\u0000';
+        int minCount = Integer.MAX_VALUE;
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            int count = 0;
+
+            for (int j = 0; j < s.length(); j++) {
+                if (s.charAt(j) == ch){
+                    count++;
+                }
+            }
+
+            if (count < minCount){
+                minCount = count;
+                minChar = ch;
+            }
+        }
+        System.out.println(minChar+" - "+minCount);
+    }
+    private static void maximumOccuredCharAndCount(String s) {
+        char maxChar = '\u0000';
+        int maxCount = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            int count = 0;
+
+            for (int j = 0; j < s.length(); j++) {
+                if (s.charAt(j) == ch) {
+                    count++;
+                }
+            }
+
+            if (count > maxCount) {
+                maxCount = count;
+                maxChar = ch;
+            }
+        }
+
+        System.out.println(maxChar + " - " + maxCount);
+    }
+
+
+    public static void removeSpaces(String s){
+        StringBuilder result = new StringBuilder();
+        StringBuilder word = new StringBuilder();
+
+        for (int i = 0; i < s.length(); i++) {
+
+            if (s.charAt(i) != ' '){
+                word.append(s.charAt(i));
+            }else{
+                if (!word.isEmpty()){
+                    result.append(word).append(" ");
+                    word.setLength(0);
+                }
+            }
+        }
+        if (!word.isEmpty())result.append(word);
+        System.out.println(result);
+    }
+
+    private static void countTheMatchingPairs(String s, String key) {
+        int count = 0;
+        for (int i = 0; i <= s.length() - key.length(); i++) {
+            if (s.substring(i, i + key.length()).equals(key)) {
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+
+
+    private static void consequtiveChar(String s){
+        char [] ch = s.toCharArray();
+        StringBuilder sb = new StringBuilder();
+
+     for (int i = 0; i < ch.length-1; i++) {
+          if (ch[i] == ch[i+1]){
+              ch[i+1] = '$';
+          }
+          sb.append(ch[i]);
+     }
+     sb.append(ch[ch.length-1]);
+     System.out.println(sb);
+ }
+    private static boolean panagram(String s){
+        String alphabets = "abcdefghijklmnopqrstuvwxyz";
+        s = s.trim().toLowerCase();
+        if (s.length() < 26) return false;
+        for (int i = 0; i < alphabets.length(); i++) {
+            if (!s.contains(alphabets.charAt(i)+"")){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean anagram(String s, String z){
+        if (s.length() != z.length())return false;
+        if (s.isEmpty() && z.isEmpty())return  true;
+        char ch = s.charAt(0);
+        s = s.replace(ch+"", "");
+        z = z.replace(ch+"", "");
+
+        return anagram(s, z);
+    }
+
+    private static void smallestPalindromString(String s){
+        String smallest = s;
+
+        for (int i = 0; i < s.length(); i++) {
+
+            for (int j = i ; j < s.length(); j++) {
+                String str = s.substring(i,j+1);
+
+                if (isPalindromByStringBuilder(str) && str.length() > 1 && str.length() < smallest.length()){
+                    smallest = str;
+                }
+            }
+        }
+        System.out.println(smallest);
+    }
+
+    private static void biggestPalindromString(String s){
+        String biggest = "";
+        for (int i = 0; i < s.length()-1; i++) {
+
+            for (int j = i ; j < s.length(); j++) {
+                String str = s.substring(i, j + 1);
+                System.out.println(str);
+
+                if (isPalindromByStringBuilder(str) && str.length() > 1 && str.length() > biggest.length()) {
+                        biggest = str;
+                }
+            }
+        }
+        System.out.println(biggest);
+    }
+
+private static void missingVowelsInString(String s){
+        String vowels = "AEIOUaeiou";
+        String result = "";
+
+    for (int i = 0; i < vowels.length(); i++) {
+        if (!s.contains(vowels.charAt(i)+"")){
+            result+=vowels.charAt(i);
+        }
+    }
+    System.out.println(result);
+}
+
+    private static void wordOccuranceUsingSplit(String s){
+        String [] words = s.split("\\s+");
+
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].equals(""))continue;
+            int count = 1;
+            for (int j = i+1; j < words.length; j++) {
+                if (words[i].equals(words[j])){
+                    count++;
+                    words[j] = "";
+                }
+            }
+            System.out.println(words[i]+" - "+count);
+        }
+    }
+
+    private static void charOccurance(String s){
+
+        while (!s.isEmpty()){
+            char ch = s.charAt(0);
+            int count = 0;
+            String n = "";
+
+            for (int i = 0; i < s.length(); i++) {
+                if (s.charAt(i) == ch){
+                    count++;
+                }else{
+                    n+=s.charAt(i);
+                }
+            }
+            System.out.println(ch+" - "+count);
+            s = n;
+        }
+    }
+
+    private static void charOccuranceUsingReplace(String s){
+    String n = "";
+    while (!s.isEmpty()){
+        char ch = s.charAt(0);
+        n = s.replace(ch+"", "");
+        int count = s.length() - n.length();
+        System.out.println(ch+" - "+count);
+        s = n;
+    }
+    }
+
 private static void removeDuplicateWordWithoutSplit(String s){
         String result = "";
         String word = "";

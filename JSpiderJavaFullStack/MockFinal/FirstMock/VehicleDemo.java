@@ -1,4 +1,4 @@
-package Mock.FirstMock;
+package JSpiderJavaFullStack.MockFinal.FirstMock;
 
 // Abstraction + Encapsulation
 abstract class Vehicle {

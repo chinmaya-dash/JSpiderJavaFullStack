@@ -1,4 +1,4 @@
-package JSpiderJavaFullStack.MockFinal.SecondMock;
+package MockFinal.SecondMock;
 
 import java.util.HashSet;
 import java.util.Scanner;

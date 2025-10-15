@@ -1,4 +1,4 @@
-package DSA.RaveeshConcepts.List.Single;
+package JSpiderJavaFullStack.DSA.RaveeshConcepts.List.Single;
 
 public class LinkedList {
     private Node first = null;

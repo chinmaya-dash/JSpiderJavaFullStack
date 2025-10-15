@@ -1,4 +1,4 @@
-package DSA.RaveeshConcepts.List.Double;
+package JSpiderJavaFullStack.DSA.RaveeshConcepts.List.Double;
 
 public class DoubleLinkedList {
     private D_Node first;

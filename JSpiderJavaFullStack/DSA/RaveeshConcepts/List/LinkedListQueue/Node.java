@@ -1,4 +1,4 @@
-package DSA.RaveeshConcepts.List.LinkedListQueue;
+package JSpiderJavaFullStack.DSA.RaveeshConcepts.List.LinkedListQueue;
 
 public class Node {
     Object element;

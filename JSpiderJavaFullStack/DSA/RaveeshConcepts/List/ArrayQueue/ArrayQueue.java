@@ -1,4 +1,4 @@
-package DSA.RaveeshConcepts.List.ArrayQueue;
+package JSpiderJavaFullStack.DSA.RaveeshConcepts.List.ArrayQueue;
 
 public class ArrayQueue {
     private Object[] a = new Object[5];

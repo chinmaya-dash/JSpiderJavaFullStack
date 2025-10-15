@@ -1,4 +1,4 @@
-package DSA.RaveeshConcepts.List.Double;
+package JSpiderJavaFullStack.DSA.RaveeshConcepts.List.Double;
 
 public class D_Node {
     D_Node next;

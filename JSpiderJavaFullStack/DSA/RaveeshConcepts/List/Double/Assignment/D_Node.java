@@ -1,4 +1,4 @@
-package DSA.RaveeshConcepts.List.Double.Assignment;
+package JSpiderJavaFullStack.DSA.RaveeshConcepts.List.Double.Assignment;
 
 public class D_Node {
     Object element;

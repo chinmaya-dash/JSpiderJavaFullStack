@@ -1,4 +1,4 @@
-package DSA.RaveeshConcepts.List.ArrayStack;
+package JSpiderJavaFullStack.DSA.RaveeshConcepts.List.ArrayStack;
 
 import java.util.EmptyStackException;
 

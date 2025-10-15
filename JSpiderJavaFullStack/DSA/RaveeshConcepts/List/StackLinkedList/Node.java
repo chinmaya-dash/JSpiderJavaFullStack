@@ -1,4 +1,4 @@
-package DSA.RaveeshConcepts.List.StackLinkedList;
+package JSpiderJavaFullStack.DSA.RaveeshConcepts.List.StackLinkedList;
 
 public class Node {
 

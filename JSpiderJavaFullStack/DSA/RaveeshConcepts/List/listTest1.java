@@ -1,4 +1,4 @@
-package DSA.RaveeshConcepts.List;
+package JSpiderJavaFullStack.DSA.RaveeshConcepts.List;
 
 public class listTest1 {
     private Object[] a = new Object[5]; // Initial array of size 5

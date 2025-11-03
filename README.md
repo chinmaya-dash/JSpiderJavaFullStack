@@ -9,6 +9,7 @@ It includes Java programs, Data Structures & Algorithms, OOPs concepts, and patt
 - **src/patterns** → Pattern printing exercises  
 - **src/Recursion** → Recursion-based problems  
 - **src/FactoryMethode** → Design pattern examples  
+- **src/Java8** → Java* New Features Practice 
 - **src/MockFinal** → Mock interview practice problems  
 - **src/Test** → Test and experiment programs
 

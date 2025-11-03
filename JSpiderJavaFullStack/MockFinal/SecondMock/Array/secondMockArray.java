@@ -15,9 +15,42 @@ import java.util.Scanner;
             }
 
             System.out.println(Arrays.toString(array));
-            quickSort(array, 0, array.length - 1);
+            mergeSort(array);
             System.out.println(Arrays.toString(array));
         }
+
+        private static void mergeSort(int[] a){
+            if (a.length <= 1)return;
+
+            int[] left  = new int[a.length/2];
+            int[] right = new int[a.length-left.length];
+
+            System.arraycopy(a, 0, left, 0, left.length);
+            System.arraycopy(a, left.length, right, 0, right.length);
+            mergeSort(left);
+            mergeSort(right);
+
+            merge(left, right, a);
+        }
+
+        private static void merge(int[] left, int[] right, int [] a){
+            int i = 0, j = 0, k = 0;
+            while (i<left.length && j < right.length){
+                if (left[i] <= right[j]){
+                    a[k++] = left[i++];
+                }else{
+                    a[k++] = right[j++];
+                }
+            }
+
+            while (i < left.length){
+                a[k++] = left[i++];
+            }
+            while (j < right.length){
+                a[k++] = right[j++];
+            }
+        }
+
 
         private static void quickSort(int[] a, int start, int end) {
             if (start < end) {

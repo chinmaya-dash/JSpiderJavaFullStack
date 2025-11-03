@@ -1,4 +1,4 @@
-package MockFinal.FirstMock;
+package JSpiderJavaFullStack.MockFinal.FirstMock;
 
 import java.util.Scanner;
 

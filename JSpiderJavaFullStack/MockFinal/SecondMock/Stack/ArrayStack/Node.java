@@ -1,4 +1,8 @@
 package JSpiderJavaFullStack.MockFinal.SecondMock.Stack.ArrayStack;
 
 public class Node {
+    public Object element;
+    public Node(Object element){
+    this.element = element;
+    }
 }

@@ -1,4 +1,4 @@
-package patterns;
+package JSpiderJavaFullStack.patterns;
 
 class pattern5 {
 

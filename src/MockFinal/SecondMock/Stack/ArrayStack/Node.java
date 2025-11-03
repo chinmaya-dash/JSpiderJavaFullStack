@@ -1,4 +1,4 @@
-package JSpiderJavaFullStack.MockFinal.SecondMock.Stack.ArrayStack;
+package MockFinal.SecondMock.Stack.ArrayStack;
 
 public class Node {
     public Object element;

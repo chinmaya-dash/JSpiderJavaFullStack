@@ -1,4 +1,4 @@
-package JSpiderJavaFullStack.MockFinal.SecondMock.comparable;
+package MockFinal.SecondMock.comparable;
 
 public class Employee implements Comparable{
     String name;

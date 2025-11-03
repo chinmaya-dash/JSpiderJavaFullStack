@@ -1,4 +1,4 @@
-package JSpiderJavaFullStack.MockFinal.SecondMock.List.ArrayList;
+package MockFinal.SecondMock.List.ArrayList;
 
 public class Test {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package JSpiderJavaFullStack.MockFinal.SecondMock.Array;
+package MockFinal.SecondMock.Array;
 
 import java.util.Arrays;
 import java.util.Random;

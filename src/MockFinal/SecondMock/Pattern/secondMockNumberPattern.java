@@ -1,4 +1,4 @@
-package JSpiderJavaFullStack.MockFinal.SecondMock.Pattern;
+package MockFinal.SecondMock.Pattern;
 
 public class secondMockNumberPattern {
 }

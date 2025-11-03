@@ -1,4 +1,4 @@
-package JSpiderJavaFullStack.MockFinal.SecondMock.List.DoubleLinkedList;
+package MockFinal.SecondMock.List.DoubleLinkedList;
 
 public class Node {
      Node next;

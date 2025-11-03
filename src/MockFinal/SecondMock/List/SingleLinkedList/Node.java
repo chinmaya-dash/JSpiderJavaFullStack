@@ -1,4 +1,4 @@
-package JSpiderJavaFullStack.MockFinal.SecondMock.List.SingleLinkedList;
+package MockFinal.SecondMock.List.SingleLinkedList;
 
 public class Node {
     Object element;

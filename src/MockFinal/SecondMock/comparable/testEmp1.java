@@ -1,4 +1,4 @@
-package JSpiderJavaFullStack.MockFinal.SecondMock.comparable;
+package MockFinal.SecondMock.comparable;
 
 import java.util.Arrays;
 

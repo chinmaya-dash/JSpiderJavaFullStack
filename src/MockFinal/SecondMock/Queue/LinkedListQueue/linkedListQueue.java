@@ -1,4 +1,4 @@
-package JSpiderJavaFullStack.MockFinal.SecondMock.Queue.LinkedListQueue;
+package MockFinal.SecondMock.Queue.LinkedListQueue;
 
 public class linkedListQueue {
     private Node first;

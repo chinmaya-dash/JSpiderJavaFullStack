@@ -1,0 +1,17 @@
+# build output
+/out/
+target/
+*.class
+
+# IDE files (IntelliJ, Eclipse)
+.idea/
+*.iml
+.classpath
+.project
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# logs
+*.log

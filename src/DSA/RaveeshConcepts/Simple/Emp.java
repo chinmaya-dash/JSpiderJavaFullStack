@@ -1,9 +1,9 @@
 package DSA.RaveeshConcepts.Simple;
 
 public class Emp implements Comparable{
-    String name;
-    int id;
-    Float salary;
+    public String name;
+    public int id;
+    public Float salary;
     static int x = 100;
     public Emp(String name, float salary){
         this.salary = salary;

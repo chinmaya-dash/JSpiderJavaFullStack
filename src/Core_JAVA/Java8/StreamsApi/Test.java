@@ -1,4 +1,4 @@
-package Java8.StreamsApi;
+package Core_JAVA.Java8.StreamsApi;
 
 import java.util.*;
 import java.util.stream.*;

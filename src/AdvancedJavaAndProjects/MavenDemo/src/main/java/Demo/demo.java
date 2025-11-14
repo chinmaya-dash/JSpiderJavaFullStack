@@ -1,18 +1,15 @@
 package Demo;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class demo {
-    private static String url = "jdbc:postgresql://localhost:5432/college";
-    private static String user = "postgres";
-    private static String password = "123";
+    private static final String url = "jdbc:postgresql://localhost:5432/college";
+    private static final String user = "postgres";
+    private static final String password = "123";
     public static void main(String[] args) {
 
         try {
-//            step 1 - Loading and Resistering
+//            step 1 - Loading and Registering
             Class.forName("org.postgresql.Driver");
             System.out.println("Driver Loaded");
 
@@ -20,22 +17,42 @@ public class demo {
             Connection connection = DriverManager.getConnection(url, user, password);
             System.out.println("Connection Established");
 
-//            step 3 - creating statement
-            Statement statement = connection.createStatement();
 
-            String sql = "insert into student values(111, 'Chinmaya Dash', 24)";
+
+
+//            step 3 - Create prepared Statement Object
+//            String sql = "insert into student values(?, ?, ?)";
+            String sql = "delete from student where id = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,999999999);
+//            preparedStatement.setString(2, "xyz");
+//            preparedStatement.setInt(3, 29993);
+            preparedStatement.execute();
+
+
+//            step 3 - creating statement
+//            Statement statement = connection.createStatement();
+//            String sql = "insert into student values(111, 'Chinmaya Dash', 24)";
 //            String sql2 = "delete from lectures where Name = 'deepak'";
-            String sql2 = "update student set id = 100, name = 'chinu', age = 25 where name = 'Chinmaya Dash'";
+//            String sql2 = "update student set id = 100, name = 'chinu', age = 25 where name = 'Chinmaya Dash'";
+//                statement.execute(sql2);
 
 //            step 4 - executing query
-            boolean flag = statement.execute(sql2);
+
+//            boolean flag = statement.execute(sql2);
             System.out.println("Data Saved...");
-            System.out.println(flag);
+//            System.out.println(flag);
 
 //            step 5 - closing connection
             connection.close();
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
+
+//        PreparedStatement  also can be used to execute static and dynamic query. we use setx() to take data input, here x is datatype of the value
+//        it will also throw sqlextension(),
+//        Statement  is used to execute only static queries.
+//        static query - passing value inside the query it is static query(hard coding)
+//        dynamic query - dynamically passing the value inside the query is known as dynamic query
     }
 }

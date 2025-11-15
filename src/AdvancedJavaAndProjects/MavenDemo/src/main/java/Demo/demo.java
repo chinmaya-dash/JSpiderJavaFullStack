@@ -13,7 +13,7 @@ public class demo {
             Class.forName("org.postgresql.Driver");
             System.out.println("Driver Loaded");
 
-//            step 2 - Establishing Connection
+//            step 2 - Establishing Connection+*-
             Connection connection = DriverManager.getConnection(url, user, password);
             System.out.println("Connection Established");
 
@@ -22,12 +22,44 @@ public class demo {
 
 //            step 3 - Create prepared Statement Object
 //            String sql = "insert into student values(?, ?, ?)";
-            String sql = "delete from student where id = ?";
+//            String sql = "delete from student where id = ?";
+              String sql = "update student set age=? where name=?" ;
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1,999999999);
-//            preparedStatement.setString(2, "xyz");
-//            preparedStatement.setInt(3, 29993);
-            preparedStatement.execute();
+
+//            preparedStatement.setInt(1,13);
+            preparedStatement.setInt(1, 24);
+            preparedStatement.setString(2, "Gayana");
+
+            preparedStatement.addBatch();
+
+//            preparedStatement.setInt(1,14);
+            preparedStatement.setInt(1, 25);
+            preparedStatement.setString(2, "Smruti");
+
+
+            preparedStatement.addBatch();
+
+//            preparedStatement.setInt(1,15);
+            preparedStatement.setInt(1, 24);
+            preparedStatement.setString(2, "Udit");
+
+            preparedStatement.addBatch();
+
+
+
+            preparedStatement.executeBatch();
+
+
+
+
+//            BatchExecution
+
+
+
+//            BatchExecution
+
+
+
 
 
 //            step 3 - creating statement
@@ -50,7 +82,7 @@ public class demo {
         }
 
 //        PreparedStatement  also can be used to execute static and dynamic query. we use setx() to take data input, here x is datatype of the value
-//        it will also throw sqlextension(),
+//        it will also throw SQLExtension(),
 //        Statement  is used to execute only static queries.
 //        static query - passing value inside the query it is static query(hard coding)
 //        dynamic query - dynamically passing the value inside the query is known as dynamic query

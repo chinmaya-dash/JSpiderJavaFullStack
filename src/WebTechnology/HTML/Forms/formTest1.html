@@ -3,67 +3,94 @@
   <head>
     <title>FormTest1</title>
   </head>
-  <body>
-    <form>
-      <fieldset  border = "2px" width = "50%">
+  <body >
+      <fieldset width = "700px">
         <legend>Registeration_Form</legend>
-
-        <table>
+        <table height="500px" >
           <tbody>
             <tr>
-                <td>Name</td>
-                <td><input type="text" placeholder="Enter Name"></td>
-            </tr>
-            
-            <tr>
-                <td>Email</td>
-                <td><input type="email" placeholder="Enter Email"></td>
-            </tr>
-            
-            <tr>
-                <td>Phone Number</td>
-                <td><input type="number" placeholder="Enter Number"></td>
-            </tr>
-            
-            <tr>
-                <td>Address</td>
-                <td><input type="text" placeholder="Enter Address"></td>
-            </tr>
-            
-            <tr>
-                <td>Catagory</td>
-                <td><input type="checkbox" >General</td>
-                <td><input type="checkbox" >obc</td>
-                <td><input type="checkbox" >others</td>
-            </tr>
-            
-            <tr>
-                <td>Gender</td>
-                <td><input type="radio">Male</td>
-                <td><input type="radio">FeMale</td>
-                <td><input type="radio">others</td>
-            </tr>
-            
-            <tr>
-                <td>DOB</td>
-                <td><input type="date" placeholder="Enter Date"></td>
-            </tr>
-            
-            <tr>
-                <td>Blood</td>
-                <td><input type="text" placeholder="Enter Blood Group"></td>
-            </tr>
-            
-            <tr>
-                <td>Password</td>
-                <td><input type="password" placeholder="Enter Password"></td>
-            </tr>
-            
-            <tr>
-                <td>Confirm Password</td>
-                <td><input type="password" placeholder="Enter Password Again"></td>
+              <td>Name</td>
+              <td><input type="text" placeholder="Enter Name" /></td>
             </tr>
 
+            <tr>
+              <td>Email</td>
+              <td><input type="email" placeholder="Enter Email" /></td>
+            </tr>
+
+            <tr>
+              <td>Phone Number</td>
+              <td><input type="number" placeholder="Enter Number" /></td>
+            </tr>
+
+            <tr>
+              <td>Address</td>
+              <td><textarea name="" id=""></textarea></td>
+            </tr>
+            <td><label for="">State</label></td>
+            <td>
+                <select>
+                  <option>select</option>
+                  <option value="">Odisha</option>
+                  <option value="">Uttar Pradesh</option>
+                  <option value="">Bihar</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Gender</td>
+              <td>
+                <input type="radio" />Male <input type="radio" />Female
+                <input type="radio" />others
+              </td>
+            </tr>
+
+            <tr>
+              <td>DOB</td>
+              <td><input type="date" placeholder="Enter Date" /></td>
+            </tr>
+
+            <tr>
+              <td>Blood</td>
+              <td><input type="text" placeholder="Enter Blood Group" /></td>
+            </tr>
+            <tr>
+              <td>Catagory</td>
+              <td>
+                <input type="checkbox" />General <input type="checkbox" />obc
+                <input type="checkbox" />others
+              </td>
+            </tr>
+
+            <tr>
+              <td>Languages</td>
+              <td>
+                <input type="checkbox" />English <br>
+
+
+                <input type="checkbox" />Hindi <br>
+
+                <input type="checkbox" />Odia <br>
+              </td>
+            </tr>
+
+            <tr>
+              <tr><td>Resume</td>
+              <td><input type="file" ></td></tr>
+              <tr>
+                <td>Password</td>
+                <td><input type="password" placeholder="Enter Password" /></td>
+              </tr>
+              <tr>
+              <td>Confirm Password</td>
+              <td>
+                <input type="password" placeholder="Enter Password Again" />
+              </td>
+            </tr>
+            <tr align="center">
+              <td colspan="2"><button type="submit">Submit</button></td>
+            </tr>
           </tbody>
         </table>
       </fieldset>

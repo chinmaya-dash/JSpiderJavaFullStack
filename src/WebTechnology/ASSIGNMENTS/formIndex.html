@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Layout</title>
+    <link rel="stylesheet" href="formStyle.css" />
+  </head>
+
+  <body>
+    <form class="form-section personal-info">
+      <!-- PERSONAL INFO -->
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <table class="form-table" cellpadding="6" cellspacing="0">
+          <!-- ROW 1 -->
+          <tr>
+            <td>First Name</td>
+            <td>
+              <input
+                type="text"
+                name="first_name"
+                placeholder="Enter First Name" />
+            </td>
+
+            <td>Middle Name</td>
+            <td>
+              <input
+                type="text"
+                name="middle_name"
+                placeholder="Enter Middle Name" />
+            </td>
+
+            <td>Last Name</td>
+            <td>
+              <input
+                type="text"
+                name="last_name"
+                placeholder="Enter Last Name" />
+            </td>
+          </tr>
+
+          <!-- ROW 2 -->
+          <tr>
+            <td>Father's Name</td>
+            <td>
+              <input
+                type="text"
+                name="father_name"
+                placeholder="Enter Father's Name" />
+            </td>
+
+            <td>Mother's Name</td>
+            <td>
+              <input
+                type="text"
+                name="mother_name"
+                placeholder="Enter Mother's Name" />
+            </td>
+
+            <td>Nationality</td>
+            <td>
+              <input
+                type="text"
+                name="nationality"
+                placeholder="Enter Nationality" />
+            </td>
+          </tr>
+
+          <!-- ROW 3 -->
+          <tr>
+            <td>Current Address</td>
+            <td colspan="1">
+              <input
+                type="text"
+                name="current_address"
+                placeholder="Enter Current Address" />
+            </td>
+
+            <td>Permanent Address</td>
+            <td colspan="1">
+              <input
+                type="text"
+                name="permanent_address"
+                placeholder="Enter Permanent Address" />
+            </td>
+
+            <td>Aadhaar Number</td>
+            <td>
+              <input
+                type="text"
+                name="aadhaar_number"
+                placeholder="Enter Aadhaar Number" />
+            </td>
+          </tr>
+
+          <!-- ROW 4 -->
+          <tr>
+            <td>Phone Number</td>
+            <td>
+              <input
+                type="tel"
+                name="phone_number"
+                placeholder="Enter Phone Number" />
+            </td>
+
+            <td>Landline Number</td>
+            <td>
+              <input
+                type="tel"
+                name="landline_number"
+                placeholder="Enter Landline Number" />
+            </td>
+
+            <td>Mobile Number</td>
+            <td>
+              <input
+                type="tel"
+                name="mobile_number"
+                placeholder="Enter Mobile Number" />
+            </td>
+          </tr>
+
+          <!-- ROW 5 -->
+          <tr>
+            <td>Date of Birth</td>
+            <td><input type="date" name="dob" placeholder="DOB" /></td>
+
+            <td>Place of Birth</td>
+            <td>
+              <input
+                type="text"
+                name="birth_place"
+                placeholder="Enter Place of Birth" />
+            </td>
+
+            <td>Gender</td>
+            <td>
+              <select name="gender">
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Others</option>
+              </select>
+            </td>
+          </tr>
+
+          <!-- ROW 6 -->
+          <tr>
+            <td>Highest Qualification</td>
+            <td>
+              <input
+                type="text"
+                name="highest_qualification"
+                placeholder="e.g. B.Tech" />
+            </td>
+
+            <td>Languages Known</td>
+            <td>
+              <input
+                type="text"
+                name="languages_known"
+                placeholder="e.g. English, Hindi" />
+            </td>
+
+            <td>PAN Card Number</td>
+            <td>
+              <input
+                type="text"
+                name="pan_number"
+                placeholder="Enter PAN Number" />
+            </td>
+          </tr>
+
+          <!-- ROW 7 -->
+          <tr>
+            <td>Hobbies</td>
+            <td>
+              <input
+                type="text"
+                name="hobbies"
+                placeholder="e.g. Reading, Music" />
+            </td>
+
+            <td>About Yourself</td>
+            <!-- About spans two cells to give room, but still keeps 6-cell structure visually -->
+            <td colspan="3">
+              <textarea
+                name="about_yourself"
+                rows="3"
+                placeholder="Write a short bio about yourself"></textarea>
+            </td>
+          </tr>
+
+          <!-- ROW 8 -->
+          <tr>
+            <td>Photo (Upload)</td>
+            <td><input type="file" name="photo" accept="image/*" /></td>
+
+            <td>LinkedIn</td>
+            <td>
+              <input
+                type="url"
+                name="linkedin"
+                placeholder="LinkedIn profile URL" />
+            </td>
+
+            <td>GitHub</td>
+            <td>
+              <input
+                type="url"
+                name="github"
+                placeholder="GitHub profile URL" />
+            </td>
+          </tr>
+
+          <!-- ROW 9 -->
+          <tr>
+            <td>Portfolio / Website</td>
+            <td>
+              <input
+                type="url"
+                name="portfolio"
+                placeholder="Portfolio or Website URL" />
+            </td>
+
+            <td>Alternate Contact</td>
+            <td>
+              <input
+                type="text"
+                name="alt_contact"
+                placeholder="Alternate contact" />
+            </td>
+
+            <td>Emergency Contact</td>
+            <td>
+              <input
+                type="tel"
+                name="emergency_contact"
+                placeholder="Emergency contact number" />
+            </td>
+          </tr>
+
+          <!-- ROW 10 -->
+          <tr>
+            <td>Blood Group</td>
+            <td>
+              <input type="text" name="blood_group" placeholder="e.g. O+" />
+            </td>
+
+            <td>Marital Status</td>
+            <td>
+              <select name="marital_status">
+                <option value="">Select</option>
+                <option>Single</option>
+                <option>Married</option>
+                <option>Other</option>
+              </select>
+            </td>
+
+            <td>Religion</td>
+            <td>
+              <input type="text" name="religion" placeholder="Enter Religion" />
+            </td>
+          </tr>
+
+          <!-- ROW 11 -->
+          <tr>
+            <td>Aadhaar Document</td>
+            <td>
+              <input type="file" name="aadhaar_doc" accept=".pdf,image/*" />
+            </td>
+
+            <td>PAN Document</td>
+            <td><input type="file" name="pan_doc" accept=".pdf,image/*" /></td>
+
+            <td>Nationality Proof</td>
+            <td>
+              <input type="file" name="nationality_doc" accept=".pdf,image/*" />
+            </td>
+          </tr>
+
+          <!-- ROW 12 -->
+          <tr>
+            <td>Residence Type</td>
+            <td>
+              <select name="residence_type">
+                <option value="">Select</option>
+                <option>Owned</option>
+                <option>Rented</option>
+                <option>Hostel</option>
+              </select>
+            </td>
+
+            <td>Current City</td>
+            <td>
+              <input type="text" name="current_city" placeholder="Enter City" />
+            </td>
+
+            <td>State</td>
+            <td>
+              <input type="text" name="state" placeholder="Enter State" />
+            </td>
+          </tr>
+
+          <!-- ROW 13 -->
+          <tr>
+            <td>Pin Code</td>
+            <td>
+              <input type="text" name="pincode" placeholder="Enter PIN code" />
+            </td>
+
+            <td>Have Disability?</td>
+            <td>
+              <label
+                ><input type="radio" name="disability" value="no" checked />
+                No</label
+              >
+              <label
+                ><input type="radio" name="disability" value="yes" /> Yes</label
+              >
+            </td>
+
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+
+    <!-- EDUCATION DETAILS -->
+    <form class="form-section">
+      <fieldset>
+        <legend>Education Details</legend>
+
+        <table class="form-table" cellpadding="6" cellspacing="0">
+          <!-- TABLE HEADER -->
+          <tr>
+            <th>S.No</th>
+            <th>Qualification</th>
+            <th>Institute / University</th>
+            <th>Year of Passing</th>
+            <th>Marks (%)</th>
+          </tr>
+
+          <!-- ROW 1 -->
+          <tr>
+            <td>1</td>
+            <td>
+              <input type="text" name="edu_qual_1" placeholder="e.g. 10th" />
+            </td>
+            <td>
+              <input
+                type="text"
+                name="edu_inst_1"
+                placeholder="School / Board Name" />
+            </td>
+            <td><input type="date" name="edu_year_1" /></td>
+            <td><input type="number" name="edu_marks_1" placeholder="%" /></td>
+          </tr>
+
+          <!-- ROW 2 -->
+          <tr>
+            <td>2</td>
+            <td>
+              <input type="text" name="edu_qual_2" placeholder="e.g. 12th" />
+            </td>
+            <td>
+              <input
+                type="text"
+                name="edu_inst_2"
+                placeholder="School / Board Name" />
+            </td>
+            <td><input type="date" name="edu_year_2" /></td>
+            <td><input type="number" name="edu_marks_2" placeholder="%" /></td>
+          </tr>
+
+          <!-- ROW 3 -->
+          <tr>
+            <td>3</td>
+            <td>
+              <input
+                type="text"
+                name="edu_qual_3"
+                placeholder="e.g. Graduation / Diploma" />
+            </td>
+            <td>
+              <input
+                type="text"
+                name="edu_inst_3"
+                placeholder="College / University Name" />
+            </td>
+            <td><input type="date" name="edu_year_3" /></td>
+            <td><input type="number" name="edu_marks_3" placeholder="%" /></td>
+          </tr>
+        </table>
+
+        <br />
+
+        <button class="btn btn-save">Save</button>
+        <button class="btn btn-reset" type="reset">Reset</button>
+      </fieldset>
+    </form>
+
+    <!-- WORK EXPERIENCE -->
+    <form class="form-section">
+      <fieldset>
+        <legend>Work Experience</legend>
+
+        <table class="form-table" cellpadding="6" cellspacing="0">
+          <!-- TABLE HEADER -->
+          <tr>
+            <th>S.No</th>
+            <th>Company</th>
+            <th>Work / Roles</th>
+            <th>From Date</th>
+            <th>To Date</th>
+          </tr>
+
+          <!-- ROW 1 -->
+          <tr>
+            <td>1</td>
+            <td>
+              <input
+                type="text"
+                name="work_company_1"
+                placeholder="Company Name" />
+            </td>
+            <td>
+              <input type="text" name="work_role_1" placeholder="Job Role" />
+            </td>
+            <td><input type="date" name="work_from_1" /></td>
+            <td><input type="date" name="work_to_1" /></td>
+          </tr>
+
+          <!-- ROW 2 -->
+          <tr>
+            <td>2</td>
+            <td>
+              <input
+                type="text"
+                name="work_company_2"
+                placeholder="Company Name" />
+            </td>
+            <td>
+              <input type="text" name="work_role_2" placeholder="Job Role" />
+            </td>
+            <td><input type="date" name="work_from_2" /></td>
+            <td><input type="date" name="work_to_2" /></td>
+          </tr>
+
+          <!-- ROW 3 -->
+          <tr>
+            <td>3</td>
+            <td>
+              <input
+                type="text"
+                name="work_company_3"
+                placeholder="Company Name" />
+            </td>
+            <td>
+              <input type="text" name="work_role_3" placeholder="Job Role" />
+            </td>
+            <td><input type="date" name="work_from_3" /></td>
+            <td><input type="date" name="work_to_3" /></td>
+          </tr>
+        </table>
+
+        <br />
+
+        <button class="btn btn-save">Save</button>
+        <button class="btn btn-reset" type="reset">Reset</button>
+      </fieldset>
+    </form>
+
+    <!-- OTHER DETAILS -->
+    <form class="form-section">
+      <fieldset>
+        <legend>Other Details</legend>
+
+        <table class="form-table" cellpadding="6" cellspacing="0">
+          <!-- JOB TYPE -->
+          <tr>
+            <td>Job Type</td>
+            <td colspan="3">
+              <label
+                ><input type="radio" name="jobtype" value="Permanent" />
+                Permanent</label
+              >
+              &nbsp;&nbsp;
+              <label
+                ><input type="radio" name="jobtype" value="Contract" />
+                Contract</label
+              >
+              &nbsp;&nbsp;
+              <label
+                ><input type="radio" name="jobtype" value="Other" />
+                Other</label
+              >
+            </td>
+          </tr>
+
+          <!-- DATE OF JOINING -->
+          <tr>
+            <td>Date of Joining</td>
+            <td><input type="date" name="joining_date" /></td>
+          </tr>
+
+          <!-- TIME OF JOINING -->
+          <tr>
+            <td>Time of Joining</td>
+            <td><input type="time" name="joining_time" /></td>
+          </tr>
+
+          <!-- PREFERRED JOB LOCATION -->
+          <tr>
+            <td>Preferred Job Location</td>
+            <td>
+              <select name="job_location">
+                <option value="">Select</option>
+                <option value="Others">Others</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Bangalore">Bangalore</option>
+              </select>
+            </td>
+          </tr>
+
+          <!-- WILLING TO RELOCATE -->
+          <tr>
+            <td>Willing to Relocate?</td>
+            <td>
+              <label
+                ><input type="radio" name="relocate" value="Yes" /> Yes</label
+              >
+              &nbsp;&nbsp;
+              <label
+                ><input type="radio" name="relocate" value="No" /> No</label
+              >
+            </td>
+          </tr>
+
+          <!-- DECLARATION -->
+          <tr>
+            <td colspan="4">
+              <label style="display: flex; align-items: center; gap: 10px">
+                <input type="checkbox" name="declare" required />
+                <span
+                  >I hereby declare that all the information provided above is
+                  true to the best of my knowledge and belief.</span
+                >
+              </label>
+            </td>
+          </tr>
+
+          <!-- BUTTONS -->
+          <tr>
+            <td colspan="4" style="text-align: center">
+              <button class="btn btn-save" type="submit">Submit</button>
+              <button class="btn btn-reset" type="reset">Reset</button>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+  </body>
+</html>

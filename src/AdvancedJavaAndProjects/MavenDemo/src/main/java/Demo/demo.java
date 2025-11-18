@@ -21,14 +21,12 @@ public class demo {
 
 
 //            step 3 - Create prepared Statement Object
-//            String sql = "insert into student values(?, ?, ?)";
+            String sql = "insert into student values(?, ?, ?)";
 //            String sql = "delete from student where id = ?";
 //              String sql = "update student set age=? where name=?" ;
 //            PreparedStatement preparedStatement = connection.prepareStatement(sql);
 //
-////            preparedStatement.setInt(1,13);
-//            preparedStatement.setInt(1, 24);
-//            preparedStatement.setString(2, "Gayana");
+
 //
 //            preparedStatement.addBatch();
 //
@@ -54,16 +52,37 @@ public class demo {
 //                statement.execute(sql2);
 
 //            For select query
-            String sql = "select * from student where name = ?";
+//            String sql = "select * from student where name = ?";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, "chinu");
-//            preparedStatement.setString(1, "chinu");
-            ResultSet resultSet = preparedStatement.executeQuery();
+            preparedStatement.setInt(1,21);
+            preparedStatement.setString(2, "Laxman");
+            preparedStatement.setInt(3, 24);
 
-            while (resultSet.next()){
-                System.out.println("id : "+resultSet.getInt(1)+", name : "+resultSet.getString(2)+", age : "+resultSet.getInt(3));
-            }
+//            executeQuery methode
+//            String sql = "select * from student where name = ?";
+//            preparedStatement.setString(2, "Laxman");
+//            ResultSet resultSet = preparedStatement.executeQuery();//only used for select query
+//            executeQuery methode
+
+//            executeBatch Methode
+
+//            executeBatch Methode
+//            ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
+//            preparedStatement.executeBatch();
+//            boolean flag = preparedStatement.execute();
+
+            //ExwcuteUpdate methode
+            int res = preparedStatement.executeUpdate();//only fro insert update and delete methode
+            System.out.println(res);
+            //ExwcuteUpdate methode
+
+//            System.out.println(resultSetMetaData.getColumnCount());
+
+//            while (resultSet.next()){
+//                System.out.println("id : "+resultSet.getInt(1)+", name : "+resultSet.getString(2)+", age : "+resultSet.getInt(3));
+//            }
+
 
 
 //            step 4 - executing query

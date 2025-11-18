@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* TRANSPARENT DARK BOX */
+.form-section {
+  background: rgba(0, 0, 0, 0.55); /* translucent dark */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  padding: 20px 25px;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0px 7px 18px rgba(0, 0, 0, 0.6);
+  max-height: 450px;
+  overflow-y: auto;
+  backdrop-filter: blur(8px); /* glass effect */
+}
+
+/* FIELDSET */
+fieldset {
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 14px;
+  padding: 18px 20px;
+  color: white;
+}
+
+/* LEGEND */
+legend {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 4px 15px;
+  border-radius: 10px;
+  background: rgba(0, 102, 255, 0.8);
+  color: white;
+}
+
+/* TABLE */
+.form-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.form-table td,
+.form-table th {
+  padding: 8px 10px;
+  vertical-align: top;
+  color: white;
+}
+
+/* CENTER S.NO */
+.form-table th:first-child,
+.form-table td:first-child {
+  text-align: center;
+  width: 60px;
+}
+
+/* INPUTS — Transparent dark fields */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 15px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.15); /* translucent white tint */
+  color: white;
+}
+
+/* Placeholder light color */
+input::placeholder,
+textarea::placeholder {
+  color: #e0e0e0;
+}
+
+/* RADIO + CHECKBOX */
+.form-table input[type="radio"],
+.form-table input[type="checkbox"] {
+  width: auto;
+  margin-right: 6px;
+}
+
+label {
+  color: white;
+}
+
+/* BUTTON BASE */
+.btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.25s ease;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(6px);
+}
+
+/* SAVE — Premium Blue Gradient */
+.btn-save {
+  background: linear-gradient(135deg, rgba(0,150,255,0.6), rgba(0,90,200,0.6));
+  color: white;
+  border: 1px solid rgba(0, 200, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 150, 255, 0.2);
+}
+
+.btn-save:hover {
+  background: linear-gradient(135deg, rgba(0,170,255,0.8), rgba(0,110,220,0.8));
+  box-shadow: 0 4px 18px rgba(0, 170, 255, 0.35);
+}
+
+/* RESET — Soft Red/Pink Gradient */
+.btn-reset {
+  background: linear-gradient(135deg, rgba(255, 80, 80, 0.6), rgba(200, 40, 90, 0.6));
+  color: white;
+  border: 1px solid rgba(255, 120, 160, 0.4);
+  margin-left: 10px;
+  box-shadow: 0 4px 15px rgba(255, 60, 120, 0.2);
+}
+
+.btn-reset:hover {
+  background: linear-gradient(135deg, rgba(255, 100, 110, 0.8), rgba(210, 50, 110, 0.8));
+  box-shadow: 0 4px 18px rgba(255, 80, 130, 0.35);
+}
+
+
+form.personal-info {
+  max-height: 700px !important;
+}

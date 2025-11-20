@@ -43,4 +43,35 @@ public class StudentService {
         return res;
     }
 
+    public int update(Student student)  {
+        String sql = "update student set age=? where name=?" ;
+        int result = 0;
+
+        try{
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, student.getAge());
+            preparedStatement.setString(2, student.getName());
+//            preparedStatement.setInt(1, student.getId());
+
+            result = preparedStatement.executeUpdate();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public int delete(int  id){
+        String sql = "delete from student where id = ?";
+        int result = 0;
+
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, id);
+            result = preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
 }

@@ -2,10 +2,85 @@
 <html lang="en">
   <head>
     <title>Div_Assignment_1</title>
-    <link rel="stylesheet" href="divAssignment1.css" />
+    <style>
+      body {
+        background-color: rgb(79, 78, 78);
+        margin: 0px;
+        padding: 10px;
+      }
+      .items {
+        height: 200px;
+        width: 300px;
+        border: 2px solid white;
+        border-radius: 18px;
+      }
+      .images {
+        height: 200px;
+        width: 300px;
+        border: 2px solid white;
+        border-radius: 18px;
+      }
+      #Imp {
+        background-image: url(./bg.jpg);
+        margin-left: 1550px;
+        margin-top: 0px;
+      }
+      #I1 {
+        background-image: url(./bg.jpg);
+        margin-left: 10px;
+        margin-top: 20px;
+      }
+      #I2 {
+        background-image: url(./bg.jpg);
+        margin-left: 1250px;
+        margin-top: 20px;
+      }
+      #D1 {
+        color: aquamarine;
+        font-size: 60px;
+        background-image: url(./bg.jpg);
+        margin-left: 10px;
+        margin-top: 0px;
+      }
+      h4::first-letter {
+        color: aliceblue;
+        font-family: cursive;
+      }
+      #D1:hover {
+        background-color: aliceblue;
+        width: 50%;
+        cursor: pointer;
+        transform: rotate(360deg);
+        transition: all 5s linear 0s;
+      }
+      #D2 {
+        background-image: url(./bg.jpg);
+        background-color: cadetblue;
+        margin-left: 17%;
+        margin-top: 10px;
+      }
+      #D3 {
+        background-image: url(./bg.jpg);
+        background-color: antiquewhite;
+        margin-left: 34%;
+        margin-top: 0px;
+      }
+
+      #D4 {
+        background-image: url(./bg.jpg);
+        background-color: cornflowerblue;
+        margin-left: 50%;
+      }
+
+      #D5 {
+        background-image: url(./bg.jpg);
+        background-color: turquoise;
+        margin-left: 66%;
+      }
+    </style>
   </head>
   <body>
-    <div class="items" id="D1"><h4>Chinmaya</h1></div>
+    <div class="items" id="D1"><h4>Chinmaya</h4></div>
     <div class="items" id="D2"></div>
     <div class="items" id="D3"></div>
     <div class="items" id="D4"></div>
@@ -14,7 +89,9 @@
 
     <img src="./bg.jpg" alt="" class="images" id="I1" />
     <img src="./bg.jpg" alt="" class="images" id="I2" />
-    <div class = "divimage"><img src="./bg.jpg" alt="" class="images" id="I3" /></div>
+    <div class="divimage">
+      <img src="./bg.jpg" alt="" class="images" id="I3" />
+    </div>
     <img src="./bg.jpg" alt="" class="images" id="I4" />
     <img src="./bg.jpg" alt="" class="images" id="I5" />
   </body>

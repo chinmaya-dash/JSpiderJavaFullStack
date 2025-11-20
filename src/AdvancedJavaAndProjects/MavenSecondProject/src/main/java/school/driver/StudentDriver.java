@@ -44,17 +44,50 @@ public class StudentDriver {
 
                     if (save != 0) {
                         System.out.println("Data saved successfully");
+                    }else{
+                        System.out.println("Invalid Entry ?");
                     }
+
                     break;
                 }
 
                 case 2: {
                     // update logic
+//
+
+                    System.out.println("Enter your name to update");
+                    String name = sc.next();
+
+                    System.out.println("Enter your age to update");
+                    int age = sc.nextInt();
+
+                    Student student = new Student();
+//                    student.setId(id);
+                    student.setName(name);
+                    student.setAge(age);
+
+                    int update = studentService.update(student);
+
+                    if (update != 0) {
+                        System.out.println("Data Updated successfully...");
+                    }else{
+                        System.out.println("Invalid Entry ?");
+                    }
+
                     break;
                 }
 
                 case 3: {
                     // delete logic
+                    System.out.println("Enter your id to delete");
+                    int id = sc.nextInt();
+                    int delete = studentService.delete(id);
+
+                    if (delete != 0){
+                        System.out.println("Data deleted Successfully...");
+                    }else{
+                        System.out.println("Invalid Entry ?");
+                    }
                     break;
                 }
 
@@ -70,6 +103,7 @@ public class StudentDriver {
 
                 default:
                     System.out.println("Invalid choice");
+                    break;
             }
         }
     }

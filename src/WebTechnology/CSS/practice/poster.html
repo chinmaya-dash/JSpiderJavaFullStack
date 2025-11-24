@@ -1,12 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Poster_assignment</title>
-</head>
-<body>
+    <style>
+     
+      .container {
+        background-color: darkolivegreen;
+        margin-left: 30%;
+        height: 800px;
+        width: 690px;
+        border: 2px solid gray;
+        box-shadow: 0px 0px 18px;
+        position: relative;
+      }
+
+      .py,
+      .jsp {
+        height: 55px;
+        width: 170px;
+        border: 2px solid black;
+        text-align: center;
+        padding-top: 15px;
+        position: absolute;
+        top: 0;
+      }
+
+      .py {
+        left: 0;
+        border-radius: 0px 0px 50px 0px;
+      }
+
+      .jsp {
+        right: 0;
+        border-radius: 0px 0px 0px 50px;
+      }
+
+      .py:hover,
+      .jsp:hover {
+        box-shadow: 0px 0px 18px;
+      }
+
+      .py h4,
+      .jsp h4 {
+        margin: 0;
+      }
+
+      .py p,
+      .jsp p {
+        margin: 2px 0;
+      }
+
+      .image {
+        height: 250px;
+        width: 200px;
+        border: 2px solid gray;
+        margin-top: 150px;
+        margin-left: 450px;
+        border-radius: 45%;
+      }
+      .image:hover {
+        box-shadow: 0px 0px 18px;
+      }
+      .imgsrc {
+        height: 250px;
+        width: 200px;
+        border-radius: 45%;
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
-        <div class="py"></div>
-        <div class="jsp"></div>
+      <div class="py">
+        <h4><span>Py</span>spider</h4>
+        <p>Marathahalli</p>
+      </div>
+
+      <div class="jsp">
+        <h4>Jspider</h4>
+        <p>Marathahalli</p>
+      </div>
+
+      <div class="image">
+        <img class="imgsrc" src="./../../sourse/Chinmaya.png" alt="" />
+      </div>
     </div>
-</body>
+  </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Z_Index</title>
+    <style>
+      .container {
+        height: 400px;
+        width: 400px;
+        border: 2px solid black;
+        margin: 100px auto;
+      }
+      .items {
+        height: inherit;
+        width: inherit;
+        border: inherit;
+        position: absolute;
+      }
+      #con1 {
+        background-color: rgb(135, 184, 226);
+        z-index: 1;
+      }
+      #con2 {
+        background-color: rgb(112, 172, 224);
+        z-index: 10;
+      }
+      #con3 {
+        background-color: rgb(79, 154, 221);
+      }
+      #con4 {
+        background-color: rgb(41, 136, 219);
+      }
+      #con5 {
+        background-color: rgb(7, 120, 219);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items" id="con1"></div>
+      <div class="items" id="con2"></div>
+      <div class="items" id="con3"></div>
+      <div class="items" id="con4"></div>
+      <div class="items" id="con5"></div>
+    </div>
+  </body>
+</html>

@@ -3,6 +3,10 @@ package Demo;
 import java.sql.*;
 
 public class demo {
+
+    private static   Connection connection;
+
+
     private static final String url = "jdbc:postgresql://localhost:5432/college";
     private static final String user = "postgres";
     private static final String password = "123";
@@ -14,20 +18,17 @@ public class demo {
             System.out.println("Driver Loaded");
 
 //            step 2 - Establishing Connection+*-
-            Connection connection = DriverManager.getConnection(url, user, password);
+            connection = DriverManager.getConnection(url, user, password);
             System.out.println("Connection Established");
-
-
-
 
 //            step 3 - Create prepared Statement Object
             String sql = "insert into student values(?, ?, ?)";
 //            String sql = "delete from student where id = ?";
 //              String sql = "update student set age=? where name=?" ;
 //            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-//
 
-//
+
+
 //            preparedStatement.addBatch();
 //
 ////            preparedStatement.setInt(1,14);
@@ -92,10 +93,18 @@ public class demo {
 //            System.out.println("Data Saved...");
 //            System.out.println(flag);
 
-//            step 5 - closing connection
-            connection.close();
+//
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
+
+
+
+//            step 5 - closing connection
+        }finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();            }
         }
 
 //        PreparedStatement  also can be used to execute static and dynamic query. we use setx() to take data input, here x is datatype of the value
@@ -105,3 +114,5 @@ public class demo {
 //        dynamic query - dynamically passing the value inside the query is known as dynamic query
     }
 }
+
+

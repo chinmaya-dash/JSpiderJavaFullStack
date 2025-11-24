@@ -3,6 +3,7 @@ package school.driver;
 import school.entity.Student;
 import school.service.StudentService;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class StudentDriver {
@@ -11,15 +12,17 @@ public class StudentDriver {
 
         StudentService studentService = new StudentService();
         Scanner sc = new Scanner(System.in);
+        boolean flag = true;
 
-        while (true) {
+        while (flag) {
 
             System.out.println("Enter your choice");
             System.out.println("1: Insert data");
             System.out.println("2: Update data");
             System.out.println("3: Delete data");
             System.out.println("4: Fetch data");
-            System.out.println("5: Exit");
+            System.out.println("5: Fetch data By id");
+            System.out.println("6: Exit");
 
             int choice = sc.nextInt();
 
@@ -91,14 +94,52 @@ public class StudentDriver {
                     break;
                 }
 
+//                case 4: {
+//                    // fetch logic
+//                        studentService.fetchAll();
+//                    break;
+//                }
                 case 4: {
-                    // fetch logic
+//
+                    List<Student> list = studentService.fetchAll();
+                    if (list != null){
+                        for (Student student : list) {
+                            System.out.println(student);
+                        }
+                    }else{
+                        System.out.println("No records Found");
+                    }
                     break;
                 }
 
-                case 5: {
+                case 5:{
+                    System.out.println("Enter id to fetch: ");
+                    int id = sc.nextInt();
+
+                    Student stu = studentService.fetch(id);
+
+                    if (stu != null) {
+                        System.out.println("Student Found:");
+                        System.out.println("ID   : " + stu.getId());
+                        System.out.println("Name : " + stu.getName());
+                        System.out.println("Age  : " + stu.getAge());
+                    } else {
+                        System.out.println("No student found with id: " + id);
+                    }
+                    break;
+                }
+
+                case 6: {
                     System.out.println("Exiting...");
-                    System.exit(0);
+//                    System.exit(0);
+                    boolean flag1 = studentService.exit();
+                    if (flag1){
+                        flag = false;
+                        System.out.println("Application closed");
+                    }else{
+                        System.out.println("Application Still Running");
+                    }
+                    break;
                 }
 
                 default:

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drop_Down_Login_Flipkart</title>
+
+    <style>
+      .login {
+        font-size: 1.2rem;
+        background: none;
+        border: none;
+        padding: 15px 10px;
+        margin: 10px;
+        cursor: pointer;
+        font-family: cursive;
+      }
+
+      .login:hover {
+        box-shadow: 0px 0px 18px rgb(0, 0, 0);
+        border-radius: 10px;
+      }
+
+      .dropdown {
+        width: 260px;
+        padding: 15px 20px;
+        margin-left: 10px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        background: white;
+
+        position: absolute;
+        display: none;
+      }
+
+      .dropWrapper:hover .dropdown {
+        display: block;
+      }
+
+      .firstLine {
+        margin-bottom: 10px;
+      }
+
+      .leftLink {
+        float: left;
+        display: inline;
+        color: black;
+        font-size: 1.05rem;
+        text-decoration: none;
+      }
+
+      .rightLink {
+        float: right;
+        display: inline;
+        color: rgb(0, 89, 255);
+        font-size: 1.05rem;
+        text-decoration: none;
+      }
+
+      hr {
+        clear: both;
+        margin: 8px 0;
+      }
+
+      .item {
+        text-decoration: none;
+        display: block;
+        padding: 12px 0;
+        color: black;
+        font-size: 1.1rem;
+        text-align: left;
+      }
+
+      .item i,
+      .leftLink i,
+      .gifticon {
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      .gifticon {
+        width: 20px;
+        height: 20px;
+      }
+    </style>
+
+    <link rel="stylesheet" href="./../fontawesome-free-7.1.0-web/css/all.css" />
+  </head>
+  <body>
+    <div class="dropWrapper">
+      <button class="login"><i class="fa-solid fa-user"></i> Login</button>
+
+      <div class="dropdown">
+        <div class="firstLine">
+          <a class="leftLink" href="">New Customer?</a>
+          <a class="rightLink" href="">Sign up</a>
+        </div>
+        <br />
+        <hr />
+
+        <a class="item" href=""><i class="fa-solid fa-user"></i>My Profile</a>
+
+        <a class="item" href="">
+          <img class="gifticon" src="./../sourse/plus.png" />Flipkart Plus Zone
+        </a>
+
+        <a class="item" href=""><i class="fa-solid fa-truck-fast"></i>Orders</a>
+        <a class="item" href=""><i class="fa-solid fa-heart"></i>WishList</a>
+        <a class="item" href=""><i class="fa-solid fa-gift"></i>Rewards</a>
+
+        <a class="item" href="">
+          <img class="gifticon" src="./../sourse/giftcard.png" />Gift cards
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

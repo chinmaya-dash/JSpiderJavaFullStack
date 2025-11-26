@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipkart_Part_1</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        margin: 20px auto;
+        width: 70%;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.794);
+      }
+
+      .items {
+        width: 100px;
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .items img {
+        width: 64px;
+        height: 64px;
+        border-radius: 10px;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .items h4 {
+        margin-top: 8px;
+        color: #1a1a1a;
+        font-size: 14px;
+      }
+
+      .items:hover h4 {
+        color: rgb(36, 92, 92);
+      }
+
+      .items:hover img {
+        transform: scale(1.1);
+      }
+
+      /*  DROPDOWN      */
+
+      .dropdownItem {
+        position: relative;
+      }
+
+      .dropdownItem .dropdownIcon {
+        height: 10px;
+        width: 10px;
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+      }
+
+      .dropdownItem:hover .dropdownIcon {
+        transform: rotate(180deg);
+      }
+
+      .dropdownPanel {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.25s ease;
+        z-index: 500;
+        white-space: nowrap;
+      }
+
+      .dropdownItem:hover .dropdownPanel {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .leftPanel {
+        width: 180px;
+        padding: 15px;
+        background: #f9f9f9;
+        border-right: 1px solid #ddd;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .rightPanel {
+        width: 220px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .leftPanel a,
+      .rightPanel a {
+        color: black;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .leftPanel a:hover,
+      .rightPanel a:hover {
+        color: #2874f0;
+      }
+      /*  DROPDOWN      */
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <a href="" class="items">
+        <img src="./../Flipkart_Src/flipkartMunites.webp" alt="" />
+        <h4>Minutes</h4>
+      </a>
+
+      <a href="" class="items">
+        <img src="./../Flipkart_Src/flipkartMobile.webp" alt="" />
+        <h4>Mobiles & Tablets</h4>
+      </a>
+
+      <!-- FASHION -->
+      <div class="items dropdownItem" onclick="location.href=''">
+        <img src="./../Flipkart_Src/flipkartFashion.avif" alt="" />
+
+        <h4>
+          Fashion
+          <img
+            class="dropdownIcon"
+            src="./../Flipkart_Src/flipkartDropDown.png" />
+        </h4>
+
+        <div class="dropdownPanel">
+  <div class="leftPanel">
+    <a href="">Men's Clothing</a>
+    <a href="">Women's Clothing</a>
+    <a href="">Kids Wear</a>
+    <a href="">Footwear</a>
+    <a href="">Ethnic Wear</a>
+  </div>
+
+  <div class="rightPanel">
+    <a href="">Watches</a>
+    <a href="">Bags & Luggage</a>
+    <a href="">Jewellery</a>
+    <a href="">Sunglasses</a>
+    <a href="">Beauty Accessories</a>
+  </div>
+</div>
+
+      </div>
+
+      <!-- Electronics -->
+      <div class="items dropdownItem" onclick="location.href='electronics.html'">
+  <img src="./../Flipkart_Src/flipkartElectronics.webp" alt="" />
+
+  <h4>
+    Electronics
+    <img class="dropdownIcon" src="./../Flipkart_Src/flipkartDropDown.png" alt="" />
+  </h4>
+
+  <div class="dropdownPanel">
+    <div class="leftPanel">
+      <a href="">Laptops</a>
+      <a href="">Mobiles</a>
+      <a href="">Smart Watches</a>
+      <a href="">Tablets</a>
+      <a href="">Camera</a>
+    </div>
+
+    <div class="rightPanel">
+      <a href="">Earphones</a>
+      <a href="">Speakers</a>
+      <a href="">Power Banks</a>
+      <a href="">Mi Accessories</a>
+      <a href="">Data Cables</a>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Home & Furniture -->
+      <div
+        class="items dropdownItem"
+        onclick="location.href='home-furniture.html'">
+        <img src="./../Flipkart_Src/flipkartFurniture.webp" alt="" />
+
+        <h4>
+          Home & Furniture
+          <img
+            class="dropdownIcon"
+            src="./../Flipkart_Src/flipkartDropDown.png"
+            alt="" />
+        </h4>
+
+        <div class="dropdownPanel">
+          <div class="leftPanel">
+            <a href="">Sofas</a>
+            <a href="">Beds</a>
+            <a href="">Dining Sets</a>
+            <a href="">Wardrobes</a>
+            <a href="">Mattresses</a>
+          </div>
+
+          <div class="rightPanel">
+            <a href="">Home Decor</a>
+            <a href="">Lighting</a>
+            <a href="">Kitchen Storage</a>
+            <a href="">Bathroom Needs</a>
+            <a href="">Cleaning Tools</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="" class="items">
+        <img src="./../Flipkart_Src/flipkartTv.webp" alt="" />
+        <h4>TVs & Appliances</h4>
+        </a>
+
+      <a href="" class="items">
+        <img src="./../Flipkart_Src/flipkartFlight.webp" alt="" />
+        <h4>Flight Booking</h4></a
+      >
+
+      <!-- Beauty -->
+      <div
+        class="items dropdownItem"
+        onclick="location.href='beauty-food.html'">
+        <img src="./../Flipkart_Src/flipkartbeauty.webp" alt="" />
+
+        <h4>
+          Beauty, Food
+          <img
+            class="dropdownIcon"
+            src="./../Flipkart_Src/flipkartDropDown.png"
+            alt="" />
+        </h4>
+
+        <div class="dropdownPanel">
+          <div class="leftPanel">
+            <a href="">Makeup</a>
+            <a href="">Skincare</a>
+            <a href="">Hair Care</a>
+            <a href="">Perfumes</a>
+            <a href="">Men's Grooming</a>
+          </div>
+
+          <div class="rightPanel">
+            <a href="">Snacks</a>
+            <a href="">Packaged Food</a>
+            <a href="">Beverages</a>
+            <a href="">Baby Food</a>
+            <a href="">Organic Products</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="" class="items">
+        <img src="./../Flipkart_Src/flipkartGrosory.webp" alt="" />
+        <h4>Grocery</h4></a
+      >
+    </div>
+  </body>
+</html>

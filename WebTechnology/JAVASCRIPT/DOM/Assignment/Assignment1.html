@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment_1</title>
+    <link
+      rel="stylesheet"
+      href="./../../../bootstrap-5.3.8-dist/css/bootstrap.min.css" />
+    <style>
+      * {
+        margin: 0;
+      }
+      body {
+        background-color: rgb(184, 213, 238);
+      }
+      nav {
+        background-color: rgba(33, 141, 105, 0.487);
+        color: rgba(72, 72, 29, 0.746);
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav><h2>ShopiFy 👈</h2></nav>
+
+    <div class="card m-auto mt-20px" style="width: 18rem">
+      <img src="./../../../sourse/Area51M.jpg" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Dell Alienware Area 51M Gaming Laptop</h5>
+        <h5 class="card-title">₹ 75,000</h5>
+        <h5 class="card-title">⭐ 4.5(1k+)</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card’s content.
+        </p>
+        <button href="#" onclick="decreaseCount()" class="btn btn-warning">-</button>
+        <span id="counter"></span>
+        <button onclick="increaseCount()" class="btn btn-success">+</button>
+      </div>
+    </div>
+
+    <script>
+      let count = 0;
+      let counter = document.getElementById("counter");
+      counter.textContent = count;
+
+      function increaseCount() {
+        count++;
+        counter.textContent = count;
+      }
+
+      function decreaseCount() {
+        if (count > 0) {
+          count--;
+        }
+        counter.textContent = count;
+      }
+    </script>
+  </body>
+</html>

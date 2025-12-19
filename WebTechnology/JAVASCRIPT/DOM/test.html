@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+      body {
+        margin-left: 5%;
+      }
+      nav {
+        margin: 10px;
+        padding: 10px;
+        background-color: antiquewhite;
+        border-radius: 18px;
+        width: 90%;
+        
+      }
+      .container {
+        align-items: center;
+        margin: 10px auto;
+        border: 2px solid whitesmoke;
+        border-radius: 18px;
+        height: 430px;
+        width: 400px;
+      }
+      h3 {
+        margin: auto;
+        padding: 20px;
+        align-items: center;
+        width: 200px;
+      }
+      button {
+        width: 50px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: aqua;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1>My NavBar 👈</h1>
+    </nav>
+    <div class="container">
+      <h3>Count: <span id="counter"></span></h3>
+
+      <button onclick="increaseCount()" id="button">click me</button>
+    </div>
+
+    <script>
+      let count = 0;
+      let n = document.getElementById("counter");
+      n.textContent = count;
+      function increaseCount() {
+        count++;
+        n.textContent = count;
+      }
+    </script>
+  </body>
+</html>

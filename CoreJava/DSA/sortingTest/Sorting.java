@@ -83,11 +83,9 @@ static void quickSort(int[] a, int start, int end) {
                 c[k++] = b[j++];
             }
         }
-
         while (i < a.length) {
             c[k++] = a[i++];
         }
-
         while (j < b.length) {
             c[k++] = b[j++];
         }

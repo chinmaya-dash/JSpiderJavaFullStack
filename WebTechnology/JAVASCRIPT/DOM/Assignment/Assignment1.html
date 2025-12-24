@@ -30,10 +30,6 @@
         <h5 class="card-title">Dell Alienware Area 51M Gaming Laptop</h5>
         <h5 class="card-title">₹ 75,000</h5>
         <h5 class="card-title">⭐ 4.5(1k+)</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card’s content.
-        </p>
         <button href="#" onclick="decreaseCount()" class="btn btn-warning">-</button>
         <span id="counter"></span>
         <button onclick="increaseCount()" class="btn btn-success">+</button>
@@ -46,8 +42,8 @@
       counter.textContent = count;
 
       function increaseCount() {
-        count++;
-        counter.textContent = count;
+        // count++;
+        counter.textContent = ++count;
       }
 
       function decreaseCount() {

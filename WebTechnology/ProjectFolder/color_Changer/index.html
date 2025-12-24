@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Changer</title>
+    <style>
+        body{
+            background-color: #212121;
+            position: relative;
+        }
+        .container{
+            display: flex;
+            height: 900px;
+            width: 90%;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: center;
+        }
+      span {
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+        border-radius: 10px;
+      }
+      #white {
+        background-color: white;
+      }
+      #black{
+        background-color: black;
+      }
+      #grey{
+        background-color: grey;
+      }
+      #blue{
+        background-color: rgba(32, 32, 190, 0.569);
+      }
+    </style>
+  </head>
+  <body>
+      
+      <div class="container">
+          <span class="button" id="white"></span>
+          <span class="button" id="black"></span>
+          <span class="button" id="grey"></span>
+          <span class="button" id="blue"></span>
+          <span class="button" id="pink"></span>
+          
+          <h2>Choose one and see the magic!!!!</h2>
+        </div>
+
+            <script src="main.js"></script> 
+  </body>
+</html>

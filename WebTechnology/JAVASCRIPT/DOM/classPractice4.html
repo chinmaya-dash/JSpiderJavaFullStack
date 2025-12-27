@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listner</title>
+
+  </head>
+  <body>
+    <h1>Event Handling Three Approaches</h1>
+    <button id="btn1" onclick="(()=>{document.title = 'First Approach'})()">Click me</button>
+    <button id="btn2">Click me</button>
+    <button id="btn3">Click me</button>
+    <script>
+      let btn2 = document.getElementById('btn2');
+      btn2.onclick = event2;
+      let btn3 = document.getElementById('btn3');
+      btn3.addEventListener('click', event3)
+
+      function event1() {
+        document.title = "First  Approach!!!"
+      }
+      function event2() {
+        document.title = "Second  Approach!!!"
+      }
+      function event3() {
+        document.title = "Third  Approach!!!"
+      }
+    </script>
+  </body>
+</html>

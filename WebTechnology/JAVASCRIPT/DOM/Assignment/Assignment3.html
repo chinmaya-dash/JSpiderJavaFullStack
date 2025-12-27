@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Cart</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <div class="container mt-4">
+      <h4 class="text-success">CALIBERHUB</h4>
+      <div class="row" id="productContainer"></div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="productModal" tabindex="-1">
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="mTitle"></h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <img id="mImage" class="img-fluid mb-3" />
+
+            <p id="mLongDescription" class="mb-3"></p>
+
+            <h6 class="fw-bold">Package Includes:</h6>
+            <ul class="list-group mb-3" id="mPackageList"></ul>
+
+            <ul class="list-group">
+              <li class="list-group-item" id="mCategory"></li>
+              <li class="list-group-item" id="mCaliber"></li>
+              <li class="list-group-item" id="mCapacity"></li>
+              <li class="list-group-item" id="mWeight"></li>
+              <li class="list-group-item" id="mAction"></li>
+              <li class="list-group-item" id="mStock"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 🔹 PRODUCTS (NOW IN SAME SCOPE)
+        const products = [
+          {
+            id: "HG-001",
+            name: "JW4 TTI Pit Viper",
+            category: "Handgun",
+            caliber: "9mm",
+            capacity: "15+1",
+            weight: "0.82 kg",
+            price: 54999,
+            stockStatus: "In Stock",
+            rating: 4.6,
+            image: "./../../../sourse/Pit_Viper_Web_Thumb__15936.jpg",
+
+            shortDescription:
+              "As seen on the big screen – the ultimate TTI fighting pistol.",
+
+            longDescription: `As seen on the big screen – the TTI Pit Viper.
+
+The TTI Pit Viper was created specifically for the most badass assassins to be the apex fighting pistol. 
+Not only is this handgun poised to take the crown for the most iconic firearm in Hollywood history, 
+Taran Butler sent it to take the overall title at the first-ever USPSA 2-Gun Nationals in 2021.
+
+Designed before the Sand Viper, the Pit Viper waited patiently in the shadows while its sister set the 
+industry on fire. Like the Sand Viper, nothing has been compromised in making this serpent’s hidden 
+fangs strike.
+
+With its built-in static fiber optic front sight, single-port compensator, ghost-profile adjustable rear sight, 
+and Extreme Engineering LiteSpeed Fire Control System, the Pit Viper delivers reliability, accuracy, and 
+ergonomics like no other. This is the ultimate handgun.`,
+
+            packageIncludes: [
+              "5 inch large single-port compensator with DLC coated match-grade barrel",
+              "Precision cut slide",
+              "Black DLC coating on frame with high-polished slide",
+              "Extreme Engineering Fire Control Group (Lite Speed Hammer, Ultra Low Mass Sear, Match Disconnector, Titanium Hammer Strut)",
+              "Aftec type extractor",
+              "TTI Carry Magwell",
+              "Extended slide release",
+              "Extended checkered magazine release",
+              "1.75–2.25 lbs trigger pull",
+              "Stainless steel guide rod",
+              "Ultimate ergonomic beavertail and safety fit",
+              "Ambidextrous blended safety",
+              "Accessory rail cut",
+              "DLC coated steel checkered mainspring housing",
+              "Extended firing pin",
+              "TTI Phantom Grip",
+              "Built-in bladed stand-off (Fangs)",
+              "Includes three 126mm completed magazines (two with 7mm base pads, one with 4mm base pad)",
+            ],
+
+            actionType: "Semi-Automatic",
+            quantity: 1,
+          },
+          {
+            id: "HG-002",
+            name: "TTI Sand Viper Solid",
+            category: "Handgun",
+            caliber: ".45 ACP",
+            capacity: "17 / 22",
+            weight: "1.1 kg",
+            price: 68999,
+            stockStatus: "In Stock",
+            rating: 4.8,
+            image: "./../../../sourse/SV_Solid_Thumb__66221.jpg",
+
+            shortDescription:
+              "High-performance 2011 handgun with uncompromising fit, finish, and accuracy.",
+
+            longDescription: `REDUCED LEAD TIMES – IN STOCK AND READY TO SHIP!
+
+The TTI Sand Viper Solid runs flawlessly with any factory or handloaded ammunition. 
+With its extremely flat-shooting Solid Block and low bore axis optic cut, point of aim 
+will be nearly dead on at every distance from 5 yards to 50 yards.
+
+This gun is already the sickest serpent on the planet. Unlike many other 2011s, the fit 
+and finish is like nothing you've ever held. These guns are tailor designed to fit and 
+feel exactly like the firearms Taran Butler has used building his legacy.
+
+The memory groove is blended seamlessly to activate immediately. For any shooter, this 
+is the most astonishing handgun you’ll ever hold. Be careful of its hidden fangs!`,
+
+            packageIncludes: [
+              "5 inch DLC Coated Match Grade Barrel with Solid Block",
+              "Precision Optic Cut for Trijicon SRO (Ultra Low)",
+              "Coyote Bronze DLC Coating on Frame with High Polished Slide",
+              "Extreme Engineering Fire Control Group (Lite Speed Hammer, Ultra Low Mass Sear, Match Disconnector, Titanium Hammer Strut)",
+              "Aftec Type Extractor",
+              "TTI Magwell",
+              "Extended Slide Release",
+              "Extended Checkered Magazine Release",
+              "1.75–2.25 lbs Trigger Pull",
+              "Stainless Steel Guide Rod",
+              "Ultimate Ergonomic Beavertail and Safety Fit",
+              "Ambidextrous Blended Safety",
+              "Accessory Rail Cut",
+              "DLC Coated Steel Checkered Mainspring Housing",
+              "Extended Firing Pin",
+              "Built-in Bladed Stand-Off (Fangs)",
+              "Includes one 126mm (17-round) magazine with 7mm TTI Basepad",
+              "Includes two 140mm (22-round) magazines with 4mm TTI Basepad",
+            ],
+
+            actionType: "Semi-Automatic",
+            quantity: 1,
+          },
+          {
+            id: "RF-001",
+            name: "TTI G43x Combat Carry",
+            category: "Handgun",
+            caliber: "9mm",
+            capacity: "10+1 / 15+5",
+            weight: "0.82 kg",
+            price: 124999,
+            stockStatus: "In Stock",
+            rating: 4.7,
+            image: "./../../../sourse/g43xr_gray_web_1__69954.jpg",
+
+            shortDescription: "Next-generation TTI Combat Carry pistol.",
+
+            longDescription: `Incorporating unmatched looks and performance, the next generation TTI Combat Carry 43X is here. 
+  From our latest slide cuts that enhance grip and functionality, to the co-witness Trijicon night sights paired with the SIG Romeo-X, 
+  every part of this gun has been enhanced to create the ultimate carry pistol.`,
+
+            packageIncludes: [
+              "SIG Romeo-X Enclosed Compact Optic",
+              "Trijicon Tritium Night Sights (Green Front, Orange Rear)",
+              "TTI Custom Stippling",
+              "Custom Beveled Magazine Well",
+              "Custom Metal Magazine Release Button",
+              "Timney Trigger Shoe",
+              "Color Matched TTI Savior Pistol Bag",
+              "2 × 10 Round Factory Magazines",
+              "1 × 15 Round Magazine with +5 TTI Base Pad",
+            ],
+
+            actionType: "Semi-Automatic",
+            quantity: 1,
+          },
+          {
+            id: "RF-001",
+            name: "TTI G43x Combat Carry",
+            category: "Handgun",
+            caliber: "9mm",
+            capacity: "10+1 / 15+5",
+            weight: "0.82 kg",
+            price: 124999,
+            stockStatus: "In Stock",
+            rating: 4.7,
+            image: "./../../../sourse/g43xr_gray_web_1__69954.jpg",
+
+            shortDescription: "Next-generation TTI Combat Carry pistol.",
+
+            longDescription: `Incorporating unmatched looks and performance, the next generation TTI Combat Carry 43X is here. 
+  From our latest slide cuts that enhance grip and functionality, to the co-witness Trijicon night sights paired with the SIG Romeo-X, 
+  every part of this gun has been enhanced to create the ultimate carry pistol.`,
+
+            packageIncludes: [
+              "SIG Romeo-X Enclosed Compact Optic",
+              "Trijicon Tritium Night Sights (Green Front, Orange Rear)",
+              "TTI Custom Stippling",
+              "Custom Beveled Magazine Well",
+              "Custom Metal Magazine Release Button",
+              "Timney Trigger Shoe",
+              "Color Matched TTI Savior Pistol Bag",
+              "2 × 10 Round Factory Magazines",
+              "1 × 15 Round Magazine with +5 TTI Base Pad",
+            ],
+
+            actionType: "Semi-Automatic",
+            quantity: 1,
+          },
+        ];
+
+        /* ===== QTY STORAGE ===== */
+        function loadQtyFromStorage() {
+          const savedQty = JSON.parse(localStorage.getItem("productQty")) || {};
+          products.forEach((p) => {
+            if (savedQty[p.id]) p.quantity = savedQty[p.id];
+          });
+        }
+
+        function saveQtyToStorage() {
+          const qtyMap = {};
+          products.forEach((p) => (qtyMap[p.id] = p.quantity));
+          localStorage.setItem("productQty", JSON.stringify(qtyMap));
+        }
+
+        /* ===== RENDER ===== */
+        const container = document.getElementById("productContainer");
+
+        function createCard(p, index) {
+          return `
+      <div class="col-md-4 mb-3">
+        <div class="card" style="width:20rem">
+          <img src="${p.image}"
+               onerror="this.src='https://via.placeholder.com/400x250'"
+               class="card-img-top"
+               style="height:200px;object-fit:cover">
+
+          <div class="card-body">
+            <h5>${p.name}</h5>
+<p class="small">${p.shortDescription}</p>
+          </div>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">₹ ${p.price}</li>
+            <li class="list-group-item">⭐ ${p.rating}</li>
+          </ul>
+
+          <div class="card-body text-center">
+            <button class="btn btn-sm btn-secondary" onclick="decreaseQty(${index})">-</button>
+            <span class="mx-2 fw-bold" id="qty-${index}">${p.quantity}</span>
+            <button class="btn btn-sm btn-secondary" onclick="increaseQty(${index})">+</button>
+            <br><br>
+            <button class="btn btn-sm btn-success" onclick="addToCart(${index})">Add to Cart</button>
+            <button class="btn btn-sm btn-outline-primary ms-2"
+              data-bs-toggle="modal"
+              data-bs-target="#productModal"
+              data-index="${index}">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>`;
+        }
+        window.increaseQty = (i) => {
+          products[i].quantity++;
+          document.getElementById(`qty-${i}`).innerText = products[i].quantity;
+          saveQtyToStorage();
+        };
+        window.decreaseQty = (i) => {
+          if (products[i].quantity > 1) {
+            products[i].quantity--;
+            document.getElementById(`qty-${i}`).innerText =
+              products[i].quantity;
+            saveQtyToStorage();
+          }
+        };
+
+        // window.addToCart = (i) => {
+        //   const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        //   const p = products[i];
+        //   const found = cart.find((x) => x.id === p.id);
+        //   if (found) found.quantity += p.quantity;
+        //   else cart.push({ ...p });
+        //   localStorage.setItem("cart", JSON.stringify(cart));
+        //   alert("Added to cart");
+        // };
+
+        loadQtyFromStorage();
+        container.innerHTML = "";
+        products.forEach((p, i) => (container.innerHTML += createCard(p, i)));
+        document
+          .getElementById("productModal")
+          .addEventListener("show.bs.modal", function (event) {
+            const index = event.relatedTarget.getAttribute("data-index");
+            const p = products[index];
+
+            // basic info
+            mTitle.innerText = p.name;
+            mImage.src = p.image;
+            mLongDescription.innerText = p.longDescription;
+
+            // package list
+            const list = document.getElementById("mPackageList");
+            list.innerHTML = "";
+            p.packageIncludes.forEach((item) => {
+              const li = document.createElement("li");
+              li.className = "list-group-item";
+              li.innerText = item;
+              list.appendChild(li);
+            });
+
+            // specs
+            mCategory.innerText = "Category: " + p.category;
+            mCaliber.innerText = "Caliber: " + p.caliber;
+            mCapacity.innerText = "Capacity: " + p.capacity;
+            mWeight.innerText = "Weight: " + p.weight;
+            mAction.innerText = "Action: " + p.actionType;
+            mStock.innerText = "Stock: " + p.stockStatus;
+          });
+      });
+    </script>
+  </body>
+</html>

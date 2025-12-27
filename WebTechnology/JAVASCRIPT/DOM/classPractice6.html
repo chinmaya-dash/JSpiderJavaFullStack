@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <div id="display"></div>
+
+    <script>
+      // let tag = document.querySelector('p')
+      // console.log(tag);
+      // console.log(tag.textContent);//show the text present in that tag
+      // console.log(tag.innerText);//shows the only texts that are visible in web page
+      // console.log(tag.innerHTML);//shows the texts along with the html tags present in that tag
+
+      let str = "<h1>Happy New Year</h1>";
+      console.log(str, typeof str);
+
+      let divTag = document.querySelector("#container");
+      divTag.innerHTML = str;
+
+      let color = ["black", "Green", "brows", "xyz"];
+      let str1 = "<ol>";
+      for (const element of color) {
+        str = str + `<li>${element}</li>`;
+      }
+      
+      str1 += "</ol>";
+      console.log(str);
+
+      let displayTag = document.getElementById("display");
+      displayTag.innerHTML = str;
+    </script>
+
+  </body>
+</html>

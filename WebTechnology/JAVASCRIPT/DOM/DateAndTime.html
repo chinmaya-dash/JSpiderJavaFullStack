@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date & TimeOut</title>
+    <link
+      rel="stylesheet"
+      href="./../../bootstrap-5.3.8-dist/css/bootstrap.min.css" />
+  </head>
+  <body class="bg-dark-subtle">
+    <div
+      class="container d-flex justify-content-center hidden bg-dark-subtle mt-5"
+      id="page-content">
+      <div
+        class="card shadow-lg rounded-4 border-0 mt-5 bg-dark-subtle"
+        style="width: 23rem">
+        <div class="card-header bg-dark text-white text-center">
+          <h1>Date & Time</h1>
+          <h2>Asia/Kolkata</h2>
+          <h3 id="date"></h3>
+          <h4 id="time"></h4>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let dateEl = document.getElementById("date");
+      let timeEl = document.getElementById("time");
+
+      function timer() {
+        let now = new Date();
+
+        timeEl.innerHTML = now.toLocaleTimeString();
+        dateEl.innerHTML = now.toLocaleDateString();
+      }
+
+      timer(); // run once immediately
+      setInterval(timer, 1000);
+
+      // Stopwatch
+    </script>
+  </body>
+</html>

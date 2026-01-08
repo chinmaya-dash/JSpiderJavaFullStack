@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="./../../../bootstrap-5.3.8-dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-dark d-flex justify-content-center align-items-center vh-100">
+
+  <div class="card bg-light bg-transparent text-light shadow-lg rounded-4 p-4"
+       style="width: 380px; backdrop-filter: blur(10px);">
+
+    <h3 class="text-center mb-4">Register</h3>
+
+    <form id="registerForm">
+      <div class="mb-3">
+        <input type="text"
+               id="name"
+               class="form-control bg-transparent text-light border-secondary rounded-3"
+               placeholder="Full name">
+      </div>
+
+      <div class="mb-3">
+        <input type="email"
+               id="email"
+               class="form-control bg-transparent text-light border-secondary rounded-3"
+               placeholder="Email address">
+      </div>
+
+      <div class="mb-3">
+        <input type="text"
+               id="regUsername"
+               class="form-control bg-transparent text-light border-secondary rounded-3"
+               placeholder="Choose username">
+      </div>
+
+      <div class="mb-4">
+        <input type="password"
+               id="regPassword"
+               class="form-control bg-transparent text-light border-secondary rounded-3"
+               placeholder="Create password">
+      </div>
+
+      <button type="submit"
+              class="btn btn-info w-100 rounded-3 fw-semibold">
+        Register
+      </button>
+    </form>
+
+    <!-- BACK TO LOGIN -->
+    <div class="text-center mt-3">
+      <a href="login.html" class="text-info text-decoration-none">
+        ← Back to Login
+      </a>
+    </div>
+
+  </div>
+
+<script>
+const regForm = document.getElementById("registerForm");
+
+regForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const user = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    username: document.getElementById("regUsername").value,
+    password: document.getElementById("regPassword").value
+  };
+
+  console.log("Registered User:", user);
+  regForm.reset();
+});
+</script>
+
+</body>
+</html>

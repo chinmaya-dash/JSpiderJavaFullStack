@@ -9,25 +9,10 @@ public class practice1 {
         Random rd = new Random();
 
         System.out.println("Enter a sentence...");
-//        int n = 10;//sc.nextInt();
-//
-//        int[] integerArray = new int[n];
-//        for (int i = 0; i < n; i++) {
-//            integerArray[i] = rd.nextInt(10);
-//        }
-//        for (int i : integerArray){
-//            System.out.println(i);
-//        }
-//        selectionSort(integerArray);
-//        System.out.println(Arrays.toString(integerArray));
 
-//        System.out.println(binarySearch(integerArray, 5, 0, integerArray.length - 1));
-//        quickSort(integerArray, 0, integerArray.length - 1);
-//        System.out.println(Arrays.toString(integerArray));
+        String s = "chinmaya";
 
-//        diamondPattern(n);
-
-        String s = "i am a best java developer";
+h//        String s = "i am a best java developer";
 
     }
 

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link
+      rel="stylesheet"
+      href="./../../../bootstrap-5.3.8-dist/css/bootstrap.min.css" />
+  </head>
+  <body class="bg-dark-subtle">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark bg-light-warning shadow-sm px-4">
+      <span class="navbar-brand h4 text-black">🔫 ToDo List</span>
+    </nav>
+
+    <!-- <div class="container-fluid">
+    <div class="row">
+        <div class="col-4"> -->
+
+    <div
+      class="container d-flex justify-content-center hidden bg-dark-subtle"
+      id="page-content">
+      <div
+        class="card shadow-lg rounded-4 border-0 mt-5 bg-dark-subtle"
+        style="width: 23rem">
+        <div class="card-header bg-dark text-white text-center">
+          <h3>Items To Carry ?</h3>
+        </div>
+        <div class="card-body">
+          <form class="">
+            <input
+              type="text"
+              class="form-control mb-3"
+              id="enter-item"
+              placeholder="Enter Items" />
+            <input
+              type="submit"
+              class="btn btn-warning"
+              id="add-item"
+              value="Add Item" />
+          </form>
+        </div>
+        <div class="card-body">
+            <ul class="list-group-item list-group-item-warning" id="list-items"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

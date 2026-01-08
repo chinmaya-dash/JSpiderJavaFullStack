@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Payment</title>
+
+  <link rel="stylesheet" href="./../../../bootstrap-5.3.8-dist/css/bootstrap.min.css" />
+
+  <style>
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body class="bg-dark-subtle">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark bg-dark shadow-sm px-4">
+  <span class="navbar-brand h4 text-white">🛒 Shopify</span>
+  <div>
+    <button class="btn btn-warning rounded-pill me-2" id="show-btn">Show</button>
+    <button class="btn btn-outline-warning rounded-pill" id="hide-btn">Hide</button>
+  </div>
+</nav>
+
+<!-- ENTIRE PAGE CONTENT -->
+<div class="container d-flex justify-content-center hidden bg-dark-subtle" id="page-content">
+  <div class="card shadow-lg rounded-4 border-0 mt-5 " style="width: 23rem;">
+    <div class="card-header bg-dark text-white text-center">
+      <h3>Course Payment</h3>
+    </div>
+
+    <div class="card-body p-4 bg-dark-subtle bg-opacity-75">
+
+      <!-- COURSES -->
+      <div class="dropdown mb-4">
+        <button class="btn btn-secondary w-100 dropdown-toggle" data-bs-toggle="dropdown">
+          Select Course
+        </button>
+        <ul class="dropdown-menu w-100" id="dropdown"></ul>
+      </div>
+
+      <!-- COURSE PRICE -->
+      <div class="input-group mb-3">
+        <span class="input-group-text">₹</span>
+        <input type="text" class="form-control" id="course-price" readonly>
+      </div>
+
+      <!-- CAST BASED CONCESSION -->
+      <div class="mb-4">
+        <div class="form-check" ><input class="form-check-input" type="radio" name="cast" value="SC"> SC</div>
+        <div class="form-check" ><input class="form-check-input" type="radio" name="cast" value="ST"> ST</div>
+        <div class="form-check" ><input class="form-check-input" type="radio" name="cast" value="OBC"> OBC</div>
+        <div class="form-check" ><input class="form-check-input" type="radio" name="cast" value="General"> General</div>
+      </div>
+
+      <!-- CONCESSION AMOUNT -->
+      <div class="input-group mb-3">
+        <span class="input-group-text">₹</span>
+        <input type="text" class="form-control" id="discount-price" readonly>
+      </div>
+
+      <!-- CALCULATE TOTAL PRICE -->
+      <button class="btn btn-warning w-100 mb-3" id="calc-btn">Calculate</button>
+
+      <!-- AVAILABLE DUE -->
+      <div class="input-group mb-3">
+        <span class="input-group-text">₹</span>
+        <input type="text" class="form-control" id="due-price" readonly>
+      </div>
+
+      <!-- PAYMENT -->
+      <div class="input-group mb-3">
+        <span class="input-group-text">₹</span>
+        <input type="number" class="form-control" id="payment-price">
+      </div>
+
+      <button class="btn btn-primary w-100">Pay</button>
+
+    </div>
+  </div>
+</div>
+
+<script src="./../../../bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+<script src="form.js">
+</script>
+
+</body>
+</html>

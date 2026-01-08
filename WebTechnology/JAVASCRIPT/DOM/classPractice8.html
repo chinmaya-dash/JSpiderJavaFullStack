@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./../../bootstrap-5.3.8-dist/css/bootstrap.min.css" />
+    <title>Input Group</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark text-white d-flex">
+        <h2>Shopify👈</h2>
+        <button class="btn btn-warning">show</button>
+        <button class="btn btn-warning">Hide</button>
+    </nav>
+    <div class="col-3 m-auto">
+      <div class="card-header bg-dark text-white text-center">
+        <h3>Password Box</h3>
+      </div>
+
+      <form action="" id="inputGroup">
+        <div class="input-group mb-3">
+          <div class="input-group-text">
+            <input
+              class="form-check-input mt-0"
+              type="checkbox"
+              id="input-Box"/>
+          </div>
+          <input
+            type="password"
+            class="form-control"
+            aria-label="Text input with checkbox" 
+            id="pw-Box"/>
+        </div>
+      </form>
+    </div>
+
+<script>
+    let inputBox = document.getElementById('input-Box');
+    let pwBox = document.getElementById('pw-Box');
+
+    inputBox.addEventListener('change', ()=>{
+        if (pwBox.getAttribute('type') == "password") {
+            pwBox.setAttribute('type', 'text')
+        }else{
+            pwBox.setAttribute('type', 'password')
+        }
+    })
+
+</script>
+  </body>
+</html>
